@@ -1,5 +1,20 @@
 extends Node
 
+# TODO
+# - time the level & display
+# - Lose condition
+# - Ability to remove tiles
+# - Main menu
+# - Game/menu flow
+# - level flow
+# - Handle when no possible path
+
+# TO POLISH:
+# - Worldbuild
+# - Art
+# - Debug pathfinding (consider replacing?)
+# - level design
+# - Music
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -14,14 +29,12 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventScreenTouch and event.pressed:
 		var cell_position : Vector2 = $Navigation2D/TileMap.world_to_map(event.position)
 		$Navigation2D/TileMap.set_cell(cell_position.x, cell_position.y, 1)
-	
-		# TODO Find a real home for this
-		set_path()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	var time_left : float = $Timer.time_left
+	$Label.text = str(time_left)
 
 
 func set_path() -> void:
@@ -32,3 +45,9 @@ func set_path() -> void:
 	)
 	$AnimatedSprite.path = new_path
 	$Line2D.points = new_path
+
+
+func _on_Button_pressed():
+	$Button.hide()
+	set_path()
+	$Timer.start()

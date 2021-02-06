@@ -1,7 +1,6 @@
 extends AnimatedSprite
 
 
-
 var speed : = 100.0
 var path : = PoolVector2Array() setget set_path
 
