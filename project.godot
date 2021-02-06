@@ -16,7 +16,17 @@ _global_script_class_icons={
 [application]
 
 config/name="2021FebGameJam"
+run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=448
+window/size/height=704
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [rendering]
 
