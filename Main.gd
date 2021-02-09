@@ -1,7 +1,7 @@
 extends Node
 
 # TODO
-# - time the level & display
+# - Win conddition
 # - Lose condition
 # - Ability to remove tiles
 # - Main menu
@@ -15,6 +15,8 @@ extends Node
 # - Debug pathfinding (consider replacing?)
 # - level design
 # - Music
+
+# - PUBLISH TO ALL PLATFORMS!
 
 # Declare member variables here. Examples:
 # var a = 2
