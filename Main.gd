@@ -24,7 +24,8 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$LevelEndLabel.hide()
+	$TimerLabel.hide()
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -36,20 +37,27 @@ func _unhandled_input(event: InputEvent) -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var time_left : float = $Timer.time_left
-	$Label.text = str(time_left)
+	$TimerLabel.text = str(time_left)
 
 
 func set_path() -> void:
 	var new_path : PoolVector2Array = $Navigation2D.get_simple_path(
-		$AnimatedSprite.global_position,
+		$Walker.global_position,
 		# Scales the mouse position from the window's coordinate system to the viewport's.
-		$Sprite.global_position / OS.window_size * get_viewport().size
+		$Destination.global_position / OS.window_size * get_viewport().size
 	)
-	$AnimatedSprite.path = new_path
+	$Walker.path = new_path
 	$Line2D.points = new_path
 
 
 func _on_Button_pressed():
 	$Button.hide()
+	$TimerLabel.show()
 	set_path()
 	$Timer.start()
+
+
+func _on_Timer_timeout():
+	# TODO Actual win conditions
+	$LevelEndLabel.text = "You Win!"
+	$LevelEndLabel.show()

@@ -1,7 +1,7 @@
-extends AnimatedSprite
+extends Area2D
 
 
-var speed : = 100.0
+var speed : = 400.0
 var path : = PoolVector2Array() setget set_path
 
 
@@ -40,4 +40,11 @@ func set_path(value : PoolVector2Array) -> void:
 
 
 func _on_Walker_body_entered(body):
+	# TODO Figure out why this isn't working
 	print("Lose!")
+	$CollisionShape2D.set_deferred("disabled", true)
+
+
+func _on_Walker_body_shape_entered(body_id, body, body_shape, area_shape):
+	# TODO Figure out why this isn't working
+	print("here?")
