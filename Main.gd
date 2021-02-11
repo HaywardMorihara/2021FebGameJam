@@ -1,5 +1,10 @@
 extends Node
 
+# How to do scene changes for menu navigation:
+# https://godotengine.org/qa/24231/how-do-i-change-scenes
+# https://godotengine.org/qa/24773/how-to-load-and-change-scenes
+# https://docs.godotengine.org/en/stable/getting_started/step_by_step/scene_tree.htmls
+
 # TODO
 # - Win conddition
 # - Lose condition
