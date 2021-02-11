@@ -123,7 +123,6 @@ margin_right = 243.043
 margin_bottom = 57.0413
 text = "Start"
 __meta__ = {
-"_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
@@ -167,7 +166,7 @@ position = Vector2( -0.60202, 1.57617 )
 shape = SubResource( 13 )
 
 [node name="Destination" type="Area2D" parent="."]
-position = Vector2( 223.547, 675.937 )
+position = Vector2( 223.547, 498.937 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -182,5 +181,4 @@ position = Vector2( -2.1189, 0.297302 )
 shape = SubResource( 14 )
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
-[connection signal="body_entered" from="Walker" to="Walker" method="_on_Walker_body_entered"]
-[connection signal="body_shape_entered" from="Walker" to="Walker" method="_on_Walker_body_shape_entered"]
+[connection signal="area_entered" from="Walker" to="Walker" method="_on_Walker_area_entered"]

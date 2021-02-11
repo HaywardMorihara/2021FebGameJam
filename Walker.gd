@@ -39,12 +39,8 @@ func set_path(value : PoolVector2Array) -> void:
 	set_process(true)
 
 
-func _on_Walker_body_entered(body):
-	# TODO Figure out why this isn't working
+# body_entered doesn't work because Destination is NOT a body (see how Mobs were not Areas)
+# Not sure when to use which type?
+func _on_Walker_area_entered(area):
 	print("Lose!")
-	$CollisionShape2D.set_deferred("disabled", true)
-
-
-func _on_Walker_body_shape_entered(body_id, body, body_shape, area_shape):
-	# TODO Figure out why this isn't working
-	print("here?")
+	
