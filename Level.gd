@@ -1,18 +1,13 @@
 extends Node
 
-# How to do scene changes for menu navigation:
-# https://godotengine.org/qa/24231/how-do-i-change-scenes
-# https://godotengine.org/qa/24773/how-to-load-and-change-scenes
-# https://docs.godotengine.org/en/stable/getting_started/step_by_step/scene_tree.htmls
-
 # TODO
-# - Win conddition
-# - Lose condition
 # - Ability to remove tiles
 # - Main menu
 # - Game/menu flow
+# - levels
 # - level flow
 # - Handle when no possible path
+# - Mae the walk actually move on the tiles instead of the lines between them
 
 # TO POLISH:
 # - Worldbuild
@@ -23,17 +18,20 @@ extends Node
 
 # - PUBLISH TO ALL PLATFORMS!
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+
+var level_in_progress = false
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$LevelEndLabel.hide()
-	$TimerLabel.hide()
-
+	$ReturnToMenuButton.hide()
+	$RetryLevelButton.hide()
+	$TimerLabel.text = str($Timer.wait_time)
+	
 
 func _unhandled_input(event: InputEvent) -> void:
+	# TODO Remove ability to place/remove tiles once the level has started
 	if event is InputEventScreenTouch and event.pressed:
 		var cell_position : Vector2 = $Navigation2D/TileMap.world_to_map(event.position)
 		$Navigation2D/TileMap.set_cell(cell_position.x, cell_position.y, 1)
@@ -41,8 +39,9 @@ func _unhandled_input(event: InputEvent) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var time_left : float = $Timer.time_left
-	$TimerLabel.text = str(time_left)
+	if level_in_progress:
+		var time_left : float = $Timer.time_left
+		$TimerLabel.text = str(time_left)
 
 
 func set_path() -> void:
@@ -56,13 +55,35 @@ func set_path() -> void:
 
 
 func _on_Button_pressed():
-	$Button.hide()
-	$TimerLabel.show()
+	level_in_progress = true
+	$StartButton.hide()
 	set_path()
 	$Timer.start()
 
 
 func _on_Timer_timeout():
-	# TODO Actual win conditions
+	$Walker.pause = true
 	$LevelEndLabel.text = "You Win!"
 	$LevelEndLabel.show()
+	$ReturnToMenuButton.show()
+	$RetryLevelButton.show()
+
+
+func _on_ReturnToMenuButton_pressed():
+	get_tree().change_scene("res://MainMenu.tscn")
+
+
+func _on_RetryLevelButton_pressed():
+	get_tree().reload_current_scene()
+
+
+# body_entered doesn't work because Destination is NOT a body (see how Mobs were not Areas)
+# Not sure when to use which type?
+func _on_Walker_area_entered(area):
+	$Walker.pause = true
+	$Timer.paused = true
+	$LevelEndLabel.text = "LOSE"
+	$LevelEndLabel.show()
+	$ReturnToMenuButton.show()
+	$RetryLevelButton.show()
+	

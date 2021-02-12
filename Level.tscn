@@ -116,44 +116,13 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 
 [node name="Line2D" type="Line2D" parent="."]
 
-[node name="Button" type="Button" parent="."]
-margin_left = 202.043
-margin_top = 37.0413
-margin_right = 243.043
-margin_bottom = 57.0413
-text = "Start"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
-one_shot = true
-
-[node name="TimerLabel" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="LevelEndLabel" type="Label" parent="."]
-margin_left = 137.0
-margin_top = 327.0
-margin_right = 317.0
-margin_bottom = 377.0
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
 [node name="Walker" type="Area2D" parent="."]
 position = Vector2( 221.572, 25.2186 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
+speed = 150.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Walker"]
 position = Vector2( -1.05975, 1.05946 )
@@ -179,6 +148,63 @@ texture = ExtResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Destination"]
 position = Vector2( -2.1189, 0.297302 )
 shape = SubResource( 14 )
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[node name="TimerLabel" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="Button" parent="."]
+margin_left = 202.043
+margin_top = 37.0413
+margin_right = 243.043
+margin_bottom = 57.0413
+text = "Start"
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="LevelEndLabel" type="Label" parent="."]
+margin_left = 137.0
+margin_top = 327.0
+margin_right = 317.0
+margin_bottom = 377.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ReturnToMenuButton" type="Button" parent="."]
+margin_left = 152.172
+margin_top = 403.122
+margin_right = 298.172
+margin_bottom = 423.122
+text = "Return to Main Menu"
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RetryLevelButton" type="Button" parent="."]
+margin_left = 196.221
+margin_top = 437.827
+margin_right = 241.221
+margin_bottom = 457.827
+text = "Retry"
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+[connection signal="area_entered" from="Walker" to="." method="_on_Walker_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
-[connection signal="area_entered" from="Walker" to="Walker" method="_on_Walker_area_entered"]
+[connection signal="pressed" from="StartButton" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="ReturnToMenuButton" to="." method="_on_ReturnToMenuButton_pressed"]
+[connection signal="pressed" from="RetryLevelButton" to="." method="_on_RetryLevelButton_pressed"]

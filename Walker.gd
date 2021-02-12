@@ -1,8 +1,9 @@
 extends Area2D
 
 
-var speed : = 400.0
+export var speed : = 400.0
 var path : = PoolVector2Array() setget set_path
+var pause = false
 
 
 func _ready() -> void:
@@ -10,8 +11,9 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	var move_distance : = speed * delta
-	move_along_path(move_distance)
+	if !pause:
+		var move_distance : = speed * delta
+		move_along_path(move_distance)
 	
 
 func move_along_path(distance : float) -> void:
@@ -36,11 +38,5 @@ func set_path(value : PoolVector2Array) -> void:
 		return
 	path = value
 	path.remove(0)
-	set_process(true)
+	set_process(true)	
 
-
-# body_entered doesn't work because Destination is NOT a body (see how Mobs were not Areas)
-# Not sure when to use which type?
-func _on_Walker_area_entered(area):
-	print("Lose!")
-	
