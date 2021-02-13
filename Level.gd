@@ -1,7 +1,6 @@
 extends Node
 
 # TODO
-# - Ability to remove tiles
 # - Handle when no possible path
 # - Mae the walk actually move on the tiles instead of the lines between them
 # - Main menu
@@ -54,6 +53,9 @@ func set_path() -> void:
 		# Scales the mouse position from the window's coordinate system to the viewport's.
 		$Destination.global_position / OS.window_size * get_viewport().size
 	)
+	if new_path.empty():
+		_game_over("You must leave a path to the destination!")
+		return
 	$Walker.path = new_path
 	$Line2D.points = new_path
 
@@ -84,10 +86,13 @@ func _on_RetryLevelButton_pressed():
 # body_entered doesn't work because Destination is NOT a body (see how Mobs were not Areas)
 # Not sure when to use which type?
 func _on_Walker_area_entered(area):
+	_game_over("LOSE")
+	
+	
+func _game_over(text : String) -> void:
 	$Walker.pause = true
 	$Timer.paused = true
-	$LevelEndLabel.text = "LOSE"
+	$LevelEndLabel.text = text
 	$LevelEndLabel.show()
 	$ReturnToMenuButton.show()
 	$RetryLevelButton.show()
-	
