@@ -1,16 +1,15 @@
 extends Node
 
 # TODOs
-# - Main menu
-# - Game/menu flow
-# - levels
-# - level flow
+# - levels / level flow
 
 # TO POLISH:
+# - Menu
 # - Worldbuild (mouse & cheese, corn maze, triwizard tournamenet)
 # - Art
 # - Debug pathfinding (consider replacing?)
 # - level design
+# - allow for multiple walkers, multiple destinations
 # - Music
 
 # - PUBLISH TO ALL PLATFORMS!
@@ -24,10 +23,12 @@ var level_in_progress = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$LevelEndLabel.hide()
-	$ReturnToMenuButton.hide()
-	$RetryLevelButton.hide()
-	$TimerLabel.text = str($Timer.wait_time)
+	$HUD.connect("hud_start_level", self, "_start_level")
+	$HUD.connect("hud_to_menu", self, "_to_menu")
+	$HUD.connect("hud_retry_level", self, "_restart_level")
+	$Timer.connect("timeout", self, "_on_Timer_timeout")
+	$Walker.connect("area_entered", self, "_on_Walker_area_entered")
+	$HUD.level_loaded($Timer.wait_time)
 	
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -40,12 +41,11 @@ func _unhandled_input(event: InputEvent) -> void:
 			$Navigation2D/TileMap.set_cell(cell_position.x, cell_position.y, 0)
 		
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if level_in_progress:
 		var time_left : float = $Timer.time_left
-		$TimerLabel.text = str(time_left)
+		$HUD.level_update(time_left)
 
 
 func set_path() -> void:
@@ -59,42 +59,41 @@ func set_path() -> void:
 		_game_over("You must leave a path to the destination!")
 		return
 	$Walker.path = new_path
-	$Line2D.points = new_path
+	# TODO Dynamically create this for debugging
+#	$Line2D.points = new_path
 
 
-func _on_Button_pressed():
+func _game_over(text : String) -> void:
+	$Walker.pause = true
+	$Timer.paused = true
+	$HUD.level_end(text)
+	
+
+# Signals
+
+func _start_level():
 	level_in_progress = true
-	$StartButton.hide()
 	set_path()
 	$Timer.start()
+	
+
+# TODO Get this working
+func _to_menu():
+	get_tree().change_scene("res://menu/MainMenu.tscn")
 
 
-func _on_Timer_timeout():
-	$Walker.pause = true
-	$LevelEndLabel.text = "You Win!"
-	$LevelEndLabel.show()
-	$ReturnToMenuButton.show()
-	$RetryLevelButton.show()
-
-
-func _on_ReturnToMenuButton_pressed():
-	get_tree().change_scene("res://MainMenu.tscn")
-
-
-func _on_RetryLevelButton_pressed():
+# TODO Get this working
+func _restart_level():
 	get_tree().reload_current_scene()
 
+
+# TODO Get this working
+func _on_Timer_timeout():
+	$Walker.pause = true
+	$HUD.level_end("You Win!")
+	
 
 # body_entered doesn't work because Destination is NOT a body (see how Mobs were not Areas)
 # Not sure when to use which type?
 func _on_Walker_area_entered(area):
 	_game_over("LOSE")
-	
-	
-func _game_over(text : String) -> void:
-	$Walker.pause = true
-	$Timer.paused = true
-	$LevelEndLabel.text = text
-	$LevelEndLabel.show()
-	$ReturnToMenuButton.show()
-	$RetryLevelButton.show()
