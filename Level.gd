@@ -1,7 +1,6 @@
 extends Node
 
 # TODO
-# - Handle when no possible path
 # - Mae the walk actually move on the tiles instead of the lines between them
 # - Main menu
 # - Game/menu flow
@@ -51,7 +50,8 @@ func set_path() -> void:
 	var new_path : PoolVector2Array = $Navigation2D.get_simple_path(
 		$Walker.global_position,
 		# Scales the mouse position from the window's coordinate system to the viewport's.
-		$Destination.global_position / OS.window_size * get_viewport().size
+		$Destination.global_position / OS.window_size * get_viewport().size,
+		false
 	)
 	if new_path.empty():
 		_game_over("You must leave a path to the destination!")
