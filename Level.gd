@@ -2,12 +2,12 @@ extends Node
 
 # TODO
 # - Ability to remove tiles
+# - Handle when no possible path
+# - Mae the walk actually move on the tiles instead of the lines between them
 # - Main menu
 # - Game/menu flow
 # - levels
 # - level flow
-# - Handle when no possible path
-# - Mae the walk actually move on the tiles instead of the lines between them
 
 # TO POLISH:
 # - Worldbuild
@@ -34,7 +34,11 @@ func _unhandled_input(event: InputEvent) -> void:
 	# TODO Remove ability to place/remove tiles once the level has started
 	if event is InputEventScreenTouch and event.pressed:
 		var cell_position : Vector2 = $Navigation2D/TileMap.world_to_map(event.position)
-		$Navigation2D/TileMap.set_cell(cell_position.x, cell_position.y, 1)
+		if $Navigation2D/TileMap.get_cell(cell_position.x, cell_position.y) == 0:
+			$Navigation2D/TileMap.set_cell(cell_position.x, cell_position.y, 1)
+		elif $Navigation2D/TileMap.get_cell(cell_position.x, cell_position.y) == 1:
+			$Navigation2D/TileMap.set_cell(cell_position.x, cell_position.y, 0)
+		
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
