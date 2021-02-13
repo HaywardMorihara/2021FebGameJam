@@ -15,6 +15,9 @@ extends Node
 
 # - PUBLISH TO ALL PLATFORMS!
 
+# Notes:
+# A little documentation on instancing/scene/shared properties: https://www.reddit.com/r/godot/comments/drc82n/gdscript_instance_unique_material/
+
 
 var level_in_progress = false
 
