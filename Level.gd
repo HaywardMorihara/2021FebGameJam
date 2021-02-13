@@ -1,14 +1,13 @@
 extends Node
 
-# TODO
-# - Mae the walk actually move on the tiles instead of the lines between them
+# TODOs
 # - Main menu
 # - Game/menu flow
 # - levels
 # - level flow
 
 # TO POLISH:
-# - Worldbuild
+# - Worldbuild (mouse & cheese, corn maze, triwizard tournamenet)
 # - Art
 # - Debug pathfinding (consider replacing?)
 # - level design
