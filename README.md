@@ -2,6 +2,7 @@
 [https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
 # TODOs:
+- test that publishing to all platforms work (at least linux and android)
 - level design
 - playtest
 - Menu
