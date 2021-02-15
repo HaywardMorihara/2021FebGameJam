@@ -62,7 +62,7 @@ func _start_level():
 
 # TODO Get this working
 func _to_menu():
-	get_tree().change_scene("res://menu/MainMenu.tscn")
+	get_tree().change_scene("res://menus/MainMenu.tscn")
 
 
 # TODO Get this working

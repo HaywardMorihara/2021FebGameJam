@@ -1,10 +1,9 @@
 # 2021 February Game Jam Game
 [https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
-# TODOs
-- levels / level flow
-
-# TO POLISH:
+# TODOs:
+- level design
+- playtest
 - Menu
 - Worldbuild (mouse & cheese, corn maze, triwizard tournamenet)
 - Art
@@ -12,6 +11,8 @@
 - level design
 - allow for multiple walkers, multiple destinations
 - Music
+
+...and a lot more
 
 # PUBLISH TO ALL PLATFORMS!
 
