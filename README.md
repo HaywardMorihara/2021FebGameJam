@@ -4,6 +4,7 @@
 # TODOs:
 - Fix level flow
 - test that publishing to all platforms work (at least linux and android)
+- Fix Android (the proportions are really off)
 - level design (limit # of blocks, multiple walkers, beginning number of blocks, beginning position)
 - playtest
 - Menu
@@ -21,3 +22,6 @@
 # Notes:
  A little documentation on instancing/scene/shared properties: [https://www.reddit.com/r/godot/comments/drc82n/gdscript_instance_unique_material/](https://www.reddit.com/r/godot/comments/drc82n/gdscript_instance_unique_material/)
 
+## Android Commands
+- `adb devicces`
+- `adb install <YOUR_FILE>.apk`
