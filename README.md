@@ -25,3 +25,4 @@
 ## Android Commands
 - `adb devicces`
 - `adb install <YOUR_FILE>.apk`
+- Should be able to just unplug, unless I turned on FIle Transfer (by going into Setting > Connected Devices > USB and selectin file transfer)
