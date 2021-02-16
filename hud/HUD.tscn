@@ -39,27 +39,39 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ReturnToMenuButton" type="Button" parent="."]
-margin_left = 152.172
-margin_top = 403.122
-margin_right = 298.172
-margin_bottom = 423.122
-text = "Return to Main Menu"
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
 [node name="RetryLevelButton" type="Button" parent="."]
-margin_left = 196.221
-margin_top = 437.827
-margin_right = 241.221
-margin_bottom = 457.827
+margin_left = 194.221
+margin_top = 397.827
+margin_right = 239.221
+margin_bottom = 417.827
 text = "Retry"
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
 }
+
+[node name="NextLevelButton" type="Button" parent="."]
+margin_left = 170.018
+margin_top = 453.942
+margin_right = 264.018
+margin_bottom = 473.942
+text = "Next Level: ?"
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ReturnToMenuButton" type="Button" parent="."]
+margin_left = 143.172
+margin_top = 517.122
+margin_right = 289.172
+margin_bottom = 537.122
+text = "Return to Main Menu"
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
-[connection signal="pressed" from="ReturnToMenuButton" to="." method="_on_ReturnToMenuButton_pressed"]
 [connection signal="pressed" from="RetryLevelButton" to="." method="_on_RetryLevelButton_pressed"]
+[connection signal="pressed" from="NextLevelButton" to="." method="_on_NextLevelButton_pressed"]
+[connection signal="pressed" from="ReturnToMenuButton" to="." method="_on_ReturnToMenuButton_pressed"]

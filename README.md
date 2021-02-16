@@ -2,8 +2,9 @@
 [https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
 # TODOs:
+- Fix level flow
 - test that publishing to all platforms work (at least linux and android)
-- level design
+- level design (limit # of blocks, multiple walkers, beginning number of blocks, beginning position)
 - playtest
 - Menu
 - Worldbuild (mouse & cheese, corn maze, triwizard tournamenet)
