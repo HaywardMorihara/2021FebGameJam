@@ -75,27 +75,26 @@ func _next_level():
 	
 	
 func _is_next_level() -> bool:
-	var current_scene_name : String = get_tree().get_current_scene().get_name()
-	print("current scene name %s" % current_scene_name)
-	var current_level_number = current_scene_name.split("Level")[1]
-	print("Current level is %s" % current_level_number)
-	var next_level_number = float(current_level_number) + 1
-	var next_level_filename = "res://levels/Level%d.tscn" % next_level_number
-	print("Next level is %s" % next_level_filename)
+	var next_level_filename = _estimate_next_level_filename()
 	var file = File.new()
 	return file.file_exists(next_level_filename)
 
 	
 func _determine_next_level() -> String:
-	var current_scene_name : String = get_tree().get_current_scene().get_name()
-	var current_level_number = current_scene_name.split("Level")[1]
-	var next_level_number = float(current_level_number) + 1
-	var next_level_filename = "res://levels/Level%d.tscn" % next_level_number
+	var next_level_filename = _estimate_next_level_filename()
 	var file = File.new()
 	if file.file_exists(next_level_filename):
 		return next_level_filename
 	else:
 		return "null"
+
+
+func _estimate_next_level_filename() -> String:
+	var current_scene_name : String = get_tree().get_current_scene().filename
+	var current_level_number = current_scene_name.split("Level")[1].split(".tscn")[0]
+	var next_level_number = float(current_level_number) + 1
+	var next_level_filename = "res://levels/Level%d.tscn" % next_level_number
+	return next_level_filename
 
 
 # TODO Get this working
