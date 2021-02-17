@@ -2,17 +2,15 @@
 [https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
 # TODOs:
-- level design (limit # of blocks, multiple walkers, beginning number of blocks, beginning position)
+- level design (limit # of blocks, multiple walkers, multiple destinations, beginning number of blocks, beginning position)
 - playtest
 - Menu
 - Worldbuild (mouse & cheese, corn maze, triwizard tournamenet. actually, thinking snowman)
 - Art
 - Debug pathfinding (consider replacing?)
-- level design
-- allow for multiple walkers, multiple destinations
 - Music
 
-...and a lot more
+...and general polishing
 
 # PUBLISH TO ALL PLATFORMS!
 
