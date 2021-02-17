@@ -35,16 +35,14 @@ func _process(delta):
 func set_path() -> void:
 	var new_path : PoolVector2Array = $Navigation2D.get_simple_path(
 		$Walker.global_position,
-		# Scales the mouse position from the window's coordinate system to the viewport's.
-		$Destination.global_position / OS.window_size * get_viewport().size,
+		$Destination.global_position,
 		false
 	)
 	if new_path.empty():
 		_game_over("You must leave a path to the destination!")
 		return
 	$Walker.path = new_path
-	# TODO Dynamically create this for debugging
-#	$Line2D.points = new_path
+	_create_line(new_path)
 
 
 func _game_over(text : String) -> void:
@@ -110,3 +108,10 @@ func _on_Timer_timeout():
 # Not sure when to use which type?
 func _on_Walker_area_entered(area):
 	_game_over("LOSE")
+
+
+# TODO Turn off when actually releasing the game
+func _create_line(new_path : PoolVector2Array) -> void:
+	var line = Line2D.new()
+	line.points = new_path
+	add_child(line)
