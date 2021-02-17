@@ -59,12 +59,10 @@ func _start_level():
 	$Timer.start()
 	
 
-# TODO Get this working
 func _to_menu():
 	get_tree().change_scene("res://menus/MainMenu.tscn")
 
 
-# TODO Get this working
 func _restart_level():
 	get_tree().reload_current_scene()
 
@@ -97,7 +95,6 @@ func _estimate_next_level_filename() -> String:
 	return next_level_filename
 
 
-# TODO Get this working
 func _on_Timer_timeout():
 	$Walker.pause = true
 	$HUD.level_end("You Win!")
