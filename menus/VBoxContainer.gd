@@ -7,6 +7,7 @@ var level_button_scene = preload("res://menus/elements/LevelButton.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var level_scenes = _find_level_scenes()
+	level_scenes.sort()
 	print(level_scenes)
 	for level_scene in level_scenes:
 		var level_button_scene_instance = level_button_scene.instance()
