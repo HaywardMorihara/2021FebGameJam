@@ -2,13 +2,10 @@
 [https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
 # TODOs:
-- Fix level flow
-- test that publishing to all platforms work (at least linux and android)
-- Pathfinding works differently on Android...wonder if it has to do with absolute screen location or something. Also a problem with HTML, though a tad different. DOES work on Macs
 - level design (limit # of blocks, multiple walkers, beginning number of blocks, beginning position)
 - playtest
 - Menu
-- Worldbuild (mouse & cheese, corn maze, triwizard tournamenet)
+- Worldbuild (mouse & cheese, corn maze, triwizard tournamenet. actually, thinking snowman)
 - Art
 - Debug pathfinding (consider replacing?)
 - level design
