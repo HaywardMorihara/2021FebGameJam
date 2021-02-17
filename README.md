@@ -4,7 +4,7 @@
 # TODOs:
 - Fix level flow
 - test that publishing to all platforms work (at least linux and android)
-- Fix Android (the proportions are really off)
+- Pathfinding works differently on Android...wonder if it has to do with absolute screen location or something. Also a problem with HTML, though a tad different. DOES work on Macs
 - level design (limit # of blocks, multiple walkers, beginning number of blocks, beginning position)
 - playtest
 - Menu
