@@ -3,10 +3,12 @@
 
 # Release Blocking TODOs:
 - Design levels
-- Correct level progression buttons should be displayed about win/lose
 
 # Polishing TODOS:
+- There are still bugs with the walker not completing the path sometimes. Unable to reproduce reliably
 - Playtesting
+- Make it clear that you've won vs loss
+- Message at the start of the level
 - Improve HUD
 - Improve Main Menu
 - Improve Level Menu
@@ -17,7 +19,6 @@
 - Redo Tile 3
 - Music
 - Sound Effects
-- There are still bugs with the walker not completing the path sometimes. Unable to reproduce reliably
 
 # PUBLISH TO ALL PLATFORMS!
 

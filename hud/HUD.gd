@@ -25,12 +25,13 @@ func update_number_of_blocks(number_of_blocks : float) -> void:
 	$NumberOfBlocksLabel.text = str(number_of_blocks)
 
 
-func level_end(message : String, is_next_level : bool) -> void:
+func level_end(message : String, win : bool, is_next_level : bool) -> void:
 	$LevelEndLabel.text = message
 	$LevelEndLabel.show()
 	$ReturnToMenuButton.show()
-	$RetryLevelButton.show()
-	if is_next_level:
+	if !win:
+		$RetryLevelButton.show()
+	if win && is_next_level:
 		$NextLevelButton.show()
 	
 	

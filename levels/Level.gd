@@ -56,7 +56,7 @@ func set_path() -> void:
 func _game_over(text : String) -> void:
 	$Walker.pause = true
 	$Timer.paused = true
-	$HUD.level_end(text, _is_next_level())
+	$HUD.level_end(text, false, _is_next_level())
 	
 
 # Signals
@@ -105,7 +105,7 @@ func _estimate_next_level_filename() -> String:
 
 func _on_Timer_timeout():
 	$Walker.pause = true
-	$HUD.level_end("You Win!", _is_next_level())
+	$HUD.level_end("You Win!", true, _is_next_level())
 	
 
 # body_entered doesn't work because Destination is NOT a body (see how Mobs were not Areas)
