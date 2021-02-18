@@ -49,6 +49,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ) ]
 
 [node name="Level" type="Node"]
 script = ExtResource( 1 )
+number_of_blocks = 20
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
 

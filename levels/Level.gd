@@ -1,6 +1,9 @@
 extends Node
 
 
+export var number_of_blocks = 0
+
+
 var level_in_progress = false
 
 
@@ -20,9 +23,14 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventScreenTouch and event.pressed:
 		var cell_position : Vector2 = $Navigation2D/TileMap.world_to_map(event.position)
 		if $Navigation2D/TileMap.get_cell(cell_position.x, cell_position.y) == 0:
-			$Navigation2D/TileMap.set_cell(cell_position.x, cell_position.y, 1)
+			if number_of_blocks > 0:
+				$Navigation2D/TileMap.set_cell(cell_position.x, cell_position.y, 1)
+				number_of_blocks -= 1
+				$HUD.update_number_of_blocks(number_of_blocks)
 		elif $Navigation2D/TileMap.get_cell(cell_position.x, cell_position.y) == 1:
 			$Navigation2D/TileMap.set_cell(cell_position.x, cell_position.y, 0)
+			number_of_blocks += 1
+			$HUD.update_number_of_blocks(number_of_blocks)
 		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

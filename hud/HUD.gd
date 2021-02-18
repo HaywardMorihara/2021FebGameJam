@@ -17,6 +17,10 @@ func level_loaded(level_time : float) -> void:
 	
 func level_update(time_left : float) -> void:
 	$TimerLabel.text = str(time_left)
+	
+	
+func update_number_of_blocks(number_of_blocks : float) -> void:
+	$NumberOfBlocksLabel.text = str(number_of_blocks)
 
 
 func level_end(message : String, is_next_level : bool) -> void:
