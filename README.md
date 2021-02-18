@@ -1,18 +1,31 @@
 # 2021 February Game Jam Game
 [https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
-# TODOs:
-- level design (limit # of blocks, multiple walkers, multiple destinations, beginning number of blocks, beginning position)
-- playtest
-- Menu
+# Release Blocking TODOs:
+- Starting blocks can't be removed
+- Cannot remove blocks once the level has started
+- Design levels
+
+# Polishing TODOS:
+- Playtesting
+- Improve HUD
+- Improve Main Menu
+- Improve Level Menu
 - Worldbuild (mouse & cheese, corn maze, triwizard tournamenet. actually, thinking snowman)
 - Art
-- Debug pathfinding (consider replacing?)
 - Music
-
-...and general polishing
+- Sound Effects
 
 # PUBLISH TO ALL PLATFORMS!
+
+# Possible Features
+- Multiple Walkers?
+- Multiple Destinations?
+
+# Level Design:
+- Starting positions
+- Beginning # of blocks
+- Limit # of blocks
 
 # Notes:
  A little documentation on instancing/scene/shared properties: [https://www.reddit.com/r/godot/comments/drc82n/gdscript_instance_unique_material/](https://www.reddit.com/r/godot/comments/drc82n/gdscript_instance_unique_material/)
