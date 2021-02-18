@@ -105,7 +105,7 @@ func _estimate_next_level_filename() -> String:
 
 func _on_Timer_timeout():
 	$Walker.pause = true
-	$HUD.level_end("You Win!")
+	$HUD.level_end("You Win!", _is_next_level())
 	
 
 # body_entered doesn't work because Destination is NOT a body (see how Mobs were not Areas)

@@ -2,9 +2,9 @@
 [https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
 # Release Blocking TODOs:
-- Starting blocks can't be removed
 - Cannot remove blocks once the level has started
 - Design levels
+- Correct level progression buttons should be displayed about win/lose
 
 # Polishing TODOS:
 - Playtesting
@@ -18,6 +18,7 @@
 - Redo Tile 3
 - Music
 - Sound Effects
+- There are still bugs with the walker not completing the path sometimes. Unable to reproduce reliably
 
 # PUBLISH TO ALL PLATFORMS!
 
