@@ -12,7 +12,10 @@
 - Improve Main Menu
 - Improve Level Menu
 - Worldbuild (mouse & cheese, corn maze, triwizard tournamenet. actually, thinking snowman)
-- Art
+- Redo Walker Sprite
+- Redo Tile 1
+- Redo Tile 2
+- Redo Tile 3
 - Music
 - Sound Effects
 
