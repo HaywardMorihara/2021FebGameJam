@@ -2,7 +2,6 @@
 [https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
 # Release Blocking TODOs:
-- Cannot remove blocks once the level has started
 - Design levels
 - Correct level progression buttons should be displayed about win/lose
 
@@ -32,7 +31,8 @@
 - Limit # of blocks
 
 # Notes:
- A little documentation on instancing/scene/shared properties: [https://www.reddit.com/r/godot/comments/drc82n/gdscript_instance_unique_material/](https://www.reddit.com/r/godot/comments/drc82n/gdscript_instance_unique_material/)
+- A little documentation on instancing/scene/shared properties: [https://www.reddit.com/r/godot/comments/drc82n/gdscript_instance_unique_material/](https://www.reddit.com/r/godot/comments/drc82n/gdscript_instance_unique_material/)
+- I wonder if it's a bad practice to be modifying the scene child the way I am with the tilemap for the map
 
 ## Android Commands
 - `adb devicces`

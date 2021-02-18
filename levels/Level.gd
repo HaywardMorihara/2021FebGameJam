@@ -20,7 +20,7 @@ func _ready():
 
 func _unhandled_input(event: InputEvent) -> void:
 	# TODO Remove ability to place/remove tiles once the level has started
-	if event is InputEventScreenTouch and event.pressed:
+	if event is InputEventScreenTouch and event.pressed and !level_in_progress:
 		var cell_position : Vector2 = $Navigation2D/TileMap.world_to_map(event.position)
 		if $Navigation2D/TileMap.get_cell(cell_position.x, cell_position.y) == 0:
 			if number_of_blocks > 0:
