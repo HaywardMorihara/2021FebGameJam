@@ -21,10 +21,10 @@ __meta__ = {
 }
 
 [node name="StartButton" type="Button" parent="."]
-margin_left = 202.043
-margin_top = 37.0413
-margin_right = 243.043
-margin_bottom = 57.0413
+margin_left = 193.0
+margin_top = 12.0
+margin_right = 255.0
+margin_bottom = 53.0
 text = "Start"
 __meta__ = {
 "_edit_group_": true,
