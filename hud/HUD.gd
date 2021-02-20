@@ -6,7 +6,8 @@ signal hud_to_menu
 signal hud_retry_level
 signal hud_next_level
 
-func level_loaded(level_time : float, number_of_blocks : float, start_position : Vector2) -> void:
+func level_loaded(level_number : float, level_time : float, number_of_blocks : float, start_position : Vector2) -> void:
+	$TitleLabel.text = "Level %d" % level_number
 	$LevelEndLabel.hide()
 	$ReturnToMenuButton.hide()
 	$RetryLevelButton.hide()

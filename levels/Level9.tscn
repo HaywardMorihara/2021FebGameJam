@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://levels/Level.gd" type="Script" id=1]
+[ext_resource path="res://destination/Destination.tscn" type="PackedScene" id=2]
+[ext_resource path="res://hud/HUD.tscn" type="PackedScene" id=3]
+[ext_resource path="res://maps/Navigation2D.tscn" type="PackedScene" id=4]
+[ext_resource path="res://walker/Walker.tscn" type="PackedScene" id=5]
+
+[node name="Level" type="Node"]
+script = ExtResource( 1 )
+number_of_blocks = 50
+
+[node name="Navigation2D" parent="." instance=ExtResource( 4 )]
+
+[node name="Walker" parent="." instance=ExtResource( 5 )]
+position = Vector2( 22.5046, 28.9984 )
+speed = 400.0
+
+[node name="Destination" parent="." instance=ExtResource( 2 )]
+position = Vector2( 409.94, 673.726 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[node name="HUD" parent="." instance=ExtResource( 3 )]
+
+[editable path="Navigation2D"]

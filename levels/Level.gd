@@ -16,7 +16,7 @@ func _ready():
 	$Timer.connect("timeout", self, "_on_Timer_timeout")
 	$Walker.connect("area_entered", self, "_on_Walker_area_entered")
 	var start_position = $Navigation2D/TileMap.map_to_world($Navigation2D/TileMap.world_to_map($Walker.position))
-	$HUD.level_loaded($Timer.wait_time, number_of_blocks, start_position)
+	$HUD.level_loaded(_determine_current_level(), $Timer.wait_time, number_of_blocks, start_position)
 	
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -54,7 +54,7 @@ func set_path() -> void:
 		_game_over("You must leave a path to the destination!")
 		return
 	$Walker.path = new_path
-	_create_line(new_path)
+#	_create_line(new_path)
 
 
 func _game_over(text : String) -> void:
@@ -100,11 +100,15 @@ func _determine_next_level() -> String:
 
 
 func _estimate_next_level_filename() -> String:
-	var current_scene_name : String = get_tree().get_current_scene().filename
-	var current_level_number = current_scene_name.split("Level")[1].split(".tscn")[0]
-	var next_level_number = float(current_level_number) + 1
+	var next_level_number = _determine_current_level() + 1
 	var next_level_filename = "res://levels/Level%d.tscn" % next_level_number
 	return next_level_filename
+
+
+func _determine_current_level() -> float:
+	var current_scene_name : String = get_tree().get_current_scene().filename
+	var current_level_number = current_scene_name.split("Level")[1].split(".tscn")[0]
+	return float(current_level_number)
 
 
 func _on_Timer_timeout():

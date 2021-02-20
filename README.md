@@ -1,10 +1,8 @@
 # 2021 February Game Jam Game
 [https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
-# Release Blocking TODOs:
-- Design levels
-
 # Polishing TODOS:
+- Level touchup (make map smaller)
 - There are still bugs with the walker not completing the path sometimes. Unable to reproduce reliably
 - Playtesting
 - Make it clear that you've won vs loss

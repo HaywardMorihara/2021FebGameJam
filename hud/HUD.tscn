@@ -10,6 +10,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TitleLabel" type="Label" parent="."]
+margin_left = 197.807
+margin_top = 10.0794
+margin_right = 237.807
+margin_bottom = 24.0794
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="TimerLabel" type="Label" parent="."]
 margin_left = 39.2001
 margin_top = 5.29732
@@ -50,10 +59,11 @@ __meta__ = {
 }
 
 [node name="RetryLevelButton" type="Button" parent="."]
+visible = false
 margin_left = 194.221
 margin_top = 397.827
-margin_right = 239.221
-margin_bottom = 417.827
+margin_right = 258.221
+margin_bottom = 447.827
 text = "Retry"
 __meta__ = {
 "_edit_group_": true,
@@ -61,10 +71,11 @@ __meta__ = {
 }
 
 [node name="NextLevelButton" type="Button" parent="."]
-margin_left = 170.018
-margin_top = 453.942
-margin_right = 264.018
-margin_bottom = 473.942
+visible = false
+margin_left = 182.617
+margin_top = 469.061
+margin_right = 276.617
+margin_bottom = 519.061
 text = "Next Level: ?"
 __meta__ = {
 "_edit_group_": true,
@@ -72,10 +83,11 @@ __meta__ = {
 }
 
 [node name="ReturnToMenuButton" type="Button" parent="."]
-margin_left = 143.172
-margin_top = 517.122
-margin_right = 289.172
-margin_bottom = 537.122
+visible = false
+margin_left = 155.771
+margin_top = 538.541
+margin_right = 301.771
+margin_bottom = 588.541
 text = "Return to Main Menu"
 __meta__ = {
 "_edit_group_": true,
