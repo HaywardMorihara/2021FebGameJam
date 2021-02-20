@@ -15,7 +15,8 @@ func _ready():
 	$HUD.connect("hud_next_level", self, "_next_level")
 	$Timer.connect("timeout", self, "_on_Timer_timeout")
 	$Walker.connect("area_entered", self, "_on_Walker_area_entered")
-	$HUD.level_loaded($Timer.wait_time, number_of_blocks)
+	var start_position = $Navigation2D/TileMap.map_to_world($Navigation2D/TileMap.world_to_map($Walker.position))
+	$HUD.level_loaded($Timer.wait_time, number_of_blocks, start_position)
 	
 
 func _unhandled_input(event: InputEvent) -> void:

@@ -2,7 +2,6 @@
 [https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
 # Release Blocking TODOs:
-- Make sure the start button is where the Walker starts
 - Main Menu not TERRIBLE
 - Design levels
 
@@ -21,6 +20,7 @@
 - Redo Tile 3
 - Music
 - Sound Effects
+- Drag and place blocks (instead of individual presses
 
 # PUBLISH TO ALL PLATFORMS!
 

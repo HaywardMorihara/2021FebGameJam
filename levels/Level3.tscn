@@ -13,10 +13,11 @@ number_of_blocks = 50
 [node name="Navigation2D" parent="." instance=ExtResource( 3 )]
 
 [node name="Walker" parent="." instance=ExtResource( 5 )]
+position = Vector2( 22.5046, 28.9984 )
 speed = 400.0
 
 [node name="Destination" parent="." instance=ExtResource( 2 )]
-position = Vector2( 222.212, 672.466 )
+position = Vector2( 409.94, 673.726 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0
