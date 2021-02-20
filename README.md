@@ -2,7 +2,6 @@
 [https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
 # Release Blocking TODOs:
-- Main Menu not TERRIBLE
 - Design levels
 
 # Polishing TODOS:

@@ -1,4 +1,4 @@
-extends MarginContainer
+extends Control
 
 
 func _on_StartGameButton_pressed():

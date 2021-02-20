@@ -12,6 +12,7 @@ func _ready():
 	for level_scene in level_scenes:
 		var level_button_scene_instance = level_button_scene.instance()
 		level_button_scene_instance.text = level_scene
+		level_button_scene_instance.rect_min_size.y = 50
 		level_button_scene_instance.connect("pressed", self, "_on_Level_Button_pressed", [level_scene])
 		add_child(level_button_scene_instance)
 	
