@@ -2,8 +2,8 @@
 [https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
 # Release Blocking TODOs:
-- Prevent player from placing blocks on start or destinations
 - Make sure the start button is where the Walker starts
+- Main Menu not TERRIBLE
 - Design levels
 
 # Polishing TODOS:
