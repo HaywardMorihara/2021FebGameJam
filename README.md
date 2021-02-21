@@ -23,6 +23,7 @@
 - Redo Tile 3
 - Music
 - Sound Effects
+- App Icon
 - Drag and place blocks (instead of individual presses)
 - Have a "Best Time"
 - There are still bugs with the walker not completing the path sometimes. Unable to reproduce reliably
