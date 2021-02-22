@@ -56,7 +56,8 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=11]
+[sub_resource type="CircleShape2D" id=11]
+radius = 32.0
 
 [node name="Walker" type="Area2D"]
 position = Vector2( 221.572, 25.2186 )

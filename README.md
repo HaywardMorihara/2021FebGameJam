@@ -2,8 +2,6 @@
 [https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
 # Polishing TODOS:
-- Make the Walker a little bigger
-- Get rid of collision debug
 - Update level designs (Level 6 is actually a pretty good difficulty, I think. Level 7 not possible. I think a level with the destination in the middle might be interesting. Level 8 not possible. don't think 9 is either...but it's kinda interesting. I think it has to be an imperfect maze. Labels should display over the start button (if it's every there). This game shouldn't be TOO long...it isn't that interesting. Try to only have the minimum number of blocks available to the player)
 - Label the blocks and time labels
 - Display temporary error when you try and place a block and you can't plae anymore
