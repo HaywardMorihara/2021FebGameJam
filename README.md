@@ -2,7 +2,6 @@
 [https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
 # Polishing TODOS:
-- Label the blocks and time labels
 - Display temporary error when you try and place a block and you can't plae anymore
 - Adjust outlines on green tiles
 - Error when there isn't a valid path, before it starts. maybe when the block is placed or maybe okay if there's a retry option

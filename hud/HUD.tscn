@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://hud/HUD.gd" type="Script" id=1]
+[ext_resource path="res://hud/TimerLabel.gd" type="Script" id=2]
+[ext_resource path="res://hud/NumberOfBlocksLabel.gd" type="Script" id=3]
 
 [node name="HUD" type="Control"]
 margin_right = 40.0
@@ -12,18 +14,19 @@ __meta__ = {
 
 [node name="TitleLabel" type="Label" parent="."]
 margin_left = 197.807
-margin_top = 10.0794
+margin_top = 22.9974
 margin_right = 237.807
-margin_bottom = 24.0794
+margin_bottom = 36.9974
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TimerLabel" type="Label" parent="."]
-margin_left = 39.2001
-margin_top = 5.29732
-margin_right = 79.2001
-margin_bottom = 19.2973
+margin_left = 33.4093
+margin_top = 21.7789
+margin_right = 73.4093
+margin_bottom = 35.7789
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
@@ -41,10 +44,11 @@ __meta__ = {
 }
 
 [node name="NumberOfBlocksLabel" type="Label" parent="."]
-margin_left = 400.014
-margin_top = 3.5636
-margin_right = 440.014
-margin_bottom = 17.5636
+margin_left = 363.042
+margin_top = 24.4997
+margin_right = 403.042
+margin_bottom = 38.4997
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
