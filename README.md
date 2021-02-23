@@ -4,7 +4,6 @@
 # Polishing TODOS:
 - Error when there isn't a valid path, before it starts. maybe when the block is placed or maybe okay if there's a retry option
 - Option to retry and keep the maze as you've made it so far. Maybe that should just be the default every time
-- Make it clear that you've won vs loss
 - Message at the start of the level (helpful for tutorial)
 - Playtesting
 - Improve HUD
@@ -15,6 +14,7 @@
 - Redo Tile 1
 - Redo Tile 2
 - Redo Tile 3
+- Make it clear that you've won vs loss
 - Music
 - Sound Effects
 - App Icon

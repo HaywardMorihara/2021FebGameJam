@@ -5,10 +5,13 @@ export var number_of_blocks = 0
 
 
 var level_in_progress = false
+# TODO should be using a position node instead of walker on the map
+var walker_start_position : Vector2
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	walker_start_position = $Walker.position
 	$HUD.connect("hud_start_level", self, "_start_level")
 	$HUD.connect("hud_to_menu", self, "_to_menu")
 	$HUD.connect("hud_retry_level", self, "_restart_level")
@@ -17,6 +20,17 @@ func _ready():
 	$Walker.connect("area_entered", self, "_on_Walker_area_entered")
 	var start_position = $Navigation2D/TileMap.map_to_world($Navigation2D/TileMap.world_to_map($Walker.position))
 	$HUD.level_loaded(_determine_current_level(), $Timer.wait_time, number_of_blocks, start_position)
+	
+	
+# TODO Combine this into the normal level start method
+func _restart_level() -> void:
+	level_in_progress = false
+	$Walker.position = walker_start_position
+	$Timer.start()
+	$Timer.paused = true
+	var start_position = $Navigation2D/TileMap.map_to_world($Navigation2D/TileMap.world_to_map($Walker.position))
+	$HUD.level_loaded(_determine_current_level(), $Timer.wait_time, number_of_blocks, start_position)
+#	get_tree().reload_current_scene()
 	
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -75,10 +89,6 @@ func _start_level():
 
 func _to_menu():
 	get_tree().change_scene("res://menus/MainMenu.tscn")
-
-
-func _restart_level():
-	get_tree().reload_current_scene()
 
 
 func _next_level():
