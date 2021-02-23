@@ -27,10 +27,12 @@ func _unhandled_input(event: InputEvent) -> void:
 		var destination_position = $Navigation2D/TileMap.world_to_map($Destination.position)
 		if cell_position != walker_position && cell_position != destination_position:
 			if $Navigation2D/TileMap.get_cell(cell_position.x, cell_position.y) == 0:
-				if number_of_blocks > 0:
-					$Navigation2D/TileMap.set_cell(cell_position.x, cell_position.y, 1)
-					number_of_blocks -= 1
-					$HUD.update_number_of_blocks(number_of_blocks)
+				if number_of_blocks <=0:
+					$HUD.temp_message("No more blocks to place!")
+					return
+				$Navigation2D/TileMap.set_cell(cell_position.x, cell_position.y, 1)
+				number_of_blocks -= 1
+				$HUD.update_number_of_blocks(number_of_blocks)
 			elif $Navigation2D/TileMap.get_cell(cell_position.x, cell_position.y) == 1:
 				$Navigation2D/TileMap.set_cell(cell_position.x, cell_position.y, 0)
 				number_of_blocks += 1
