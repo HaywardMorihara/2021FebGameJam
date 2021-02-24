@@ -2,9 +2,6 @@
 [https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
 # Polishing TODOS:
-- Message at the start of the level (helpful for tutorial)
-
-Friday:
 - Playtesting
 - Worldbuild (Shrinking snowman)
 - Redo Walker Sprite

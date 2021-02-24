@@ -1,7 +1,8 @@
 extends Node
 
 
-export var number_of_blocks = 0
+export var number_of_blocks : int = 0
+export var start_level_message : String = ""
 
 
 var level_in_progress = false
@@ -20,6 +21,8 @@ func _ready():
 	$Walker.connect("area_entered", self, "_on_Walker_area_entered")
 	var start_position = $Navigation2D/TileMap.map_to_world($Navigation2D/TileMap.world_to_map($Walker.position))
 	$HUD.level_loaded(_determine_current_level(), $Timer.wait_time, number_of_blocks, start_position)
+	if !start_level_message.empty():
+		$HUD.temp_message(start_level_message)
 	
 	
 # TODO Combine this into the normal level start method
@@ -30,6 +33,8 @@ func _restart_level() -> void:
 	$Timer.paused = true
 	var start_position = $Navigation2D/TileMap.map_to_world($Navigation2D/TileMap.world_to_map($Walker.position))
 	$HUD.level_loaded(_determine_current_level(), $Timer.wait_time, number_of_blocks, start_position)
+	if !start_level_message.empty():
+		$HUD.temp_message(start_level_message)
 #	get_tree().reload_current_scene()
 	
 

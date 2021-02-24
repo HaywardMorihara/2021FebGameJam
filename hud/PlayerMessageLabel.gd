@@ -1,4 +1,4 @@
-extends Label
+extends RichTextLabel
 
 
 func display_temp_message(message : String) -> void:
