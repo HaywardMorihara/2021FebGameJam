@@ -2,8 +2,6 @@
 [https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
 # Polishing TODOS:
-- Error when there isn't a valid path, before it starts. maybe when the block is placed or maybe okay if there's a retry option
-- Option to retry and keep the maze as you've made it so far. Maybe that should just be the default every time
 - Message at the start of the level (helpful for tutorial)
 - Playtesting
 - Improve HUD

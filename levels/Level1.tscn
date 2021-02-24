@@ -27,9 +27,7 @@ wait_time = 3.0
 one_shot = true
 
 [node name="HUD" parent="." instance=ExtResource( 4 )]
-margin_left = 2.66962
-margin_top = -2.66971
-margin_right = 42.6696
-margin_bottom = 37.3303
+margin_right = 64.0
+margin_bottom = 64.0
 
 [editable path="Navigation2D"]

@@ -34,7 +34,6 @@ func _restart_level() -> void:
 	
 
 func _unhandled_input(event: InputEvent) -> void:
-	# TODO Remove ability to place/remove tiles once the level has started
 	if event is InputEventScreenTouch and event.pressed and !level_in_progress:
 		var cell_position : Vector2 = $Navigation2D/TileMap.world_to_map(event.position)
 		var walker_position = $Navigation2D/TileMap.world_to_map($Walker.position)
@@ -70,6 +69,8 @@ func set_path() -> void:
 		_game_over("You must leave a path to the destination!")
 		return
 	$Walker.path = new_path
+	$Walker.pause = false
+	$Timer.paused = false
 #	_create_line(new_path)
 
 
