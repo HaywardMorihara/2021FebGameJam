@@ -3,33 +3,34 @@
 
 # Polishing TODOS:
 - Message at the start of the level (helpful for tutorial)
+
+Friday:
 - Playtesting
-- Improve HUD
-- Improve Main Menu
-- Improve Level Menu
 - Worldbuild (Shrinking snowman)
 - Redo Walker Sprite
 - Redo Tile 1
 - Redo Tile 2
 - Redo Tile 3
-- Make it clear that you've won vs loss
-- Music
+- Improve HUD (Make it clear that you've won vs loss)
+- Improve Main Menu
+- Improve Level Menu
+- Publish
+
+# Enhanements
+- Stop player from placing a block that would make the level impossible
 - Sound Effects
 - App Icon
+- Music
 - Drag and place blocks (instead of individual presses)
 - Have a "Best Time"
 - There are still bugs with the walker not completing the path sometimes. Unable to reproduce reliably
 - It seems like the longest maze is actually the horizontal lanes? vs any of the other optimal ones?
-
-# PUBLISH TO ALL PLATFORMS!
-
-# Possible Features
 - Multiple Walkers?
 - Multiple Destinations?
 
 # Level Design:
 - Starting positions
-- Beginning # of blocks
+- Beginning # unmovable blocks
 - Limit # of blocks
 
 # Notes:
