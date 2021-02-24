@@ -2,12 +2,14 @@
 [https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
 # Polishing TODOS:
+- I don't think level 4 is possible? Need to make the Timer less
 - Playtesting
 - Worldbuild (Shrinking snowman)
 - Redo Walker Sprite
 - Redo Tile 1
 - Redo Tile 2
 - Redo Tile 3
+- Adjust speeds, timers
 - Improve HUD (Make it clear that you've won vs loss)
 - Improve Main Menu
 - Improve Level Menu
