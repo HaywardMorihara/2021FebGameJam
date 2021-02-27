@@ -3,8 +3,6 @@
 
 # Polishing TODOS:
 - Make timer show decimal places
-- make Level 7 the last level
-- get rid of level z
 - Show tile grid
 - Make unmovable tiles distinct, but not hard to look at
 - Publish game
