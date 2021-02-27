@@ -2,5 +2,6 @@ extends Label
 
 
 func set_time(time : float) -> void:
-	text = "%ds left" % time
+	var rounded_time = stepify(time, 0.01)
+	text = "%.2fs left" % rounded_time
 	
