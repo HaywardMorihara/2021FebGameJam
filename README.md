@@ -1,21 +1,20 @@
-# 2021 February Game Jam Game
-[https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
+# Make Amaze!
+Check it out here: https://murphysdad.itch.io/make-amaze
 
-# Polishing TODOS:
-- Publish game
+Created for the 
+[GDFG 2021 February Game Jam](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
-# If I find myself w/ time:
+Built with Godot
+
+# Notes:
+## TODO
 - Improve HUD (Make it clear that you've won vs loss)
 - Worldbuild
 - Redo walker
 - Make tiles look nice
 - Improve Main Menu
 - Improve Level Menu
-
-# Enhancements
-- Stop player from placing a block that would make the level impossible
 - Sound Effects
-- App Icon
 - Music
 - Drag and place blocks (instead of individual presses)
 - Have a "Best Time"
@@ -24,15 +23,15 @@
 - Multiple Walkers?
 - Multiple Destinations?
 
-# Level Design:
+## Development
+- A little documentation on instancing/scene/shared properties: [https://www.reddit.com/r/godot/comments/drc82n/gdscript_instance_unique_material/](https://www.reddit.com/r/godot/comments/drc82n/gdscript_instance_unique_material/)
+- I wonder if it's a bad practice to be modifying the scene child the way I am with the tilemap for the map
+
+## Level Design:
 - Starting/destination positions (central is harder)
 - Beginning # unmovable blocks
 - Limit # of blocks
 - Diagonals are faster...is this a feature or a bug?
-
-# Notes:
-- A little documentation on instancing/scene/shared properties: [https://www.reddit.com/r/godot/comments/drc82n/gdscript_instance_unique_material/](https://www.reddit.com/r/godot/comments/drc82n/gdscript_instance_unique_material/)
-- I wonder if it's a bad practice to be modifying the scene child the way I am with the tilemap for the map
 
 ## Android Commands
 - `adb devicces`
