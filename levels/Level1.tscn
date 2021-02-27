@@ -8,8 +8,8 @@
 
 [node name="Level" type="Node"]
 script = ExtResource( 1 )
-number_of_blocks = 5
-start_level_message = "Place blocks! Press \"Start\" when you're ready"
+number_of_blocks = 3
+start_level_message = "Place blocks! Press \"Start\"!"
 
 [node name="Navigation2D" parent="." instance=ExtResource( 3 )]
 
@@ -18,7 +18,7 @@ tile_data = PoolIntArray( 0, 2, 0, 1, 2, 0, 2, 2, 0, 3, 2, 0, 4, 2, 0, 5, 2, 0, 
 
 [node name="Walker" parent="." instance=ExtResource( 5 )]
 position = Vector2( 96.097, 221.44 )
-speed = 175.0
+speed = 200.0
 
 [node name="Destination" parent="." instance=ExtResource( 2 )]
 position = Vector2( 86.0583, 473.575 )

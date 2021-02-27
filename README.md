@@ -2,17 +2,16 @@
 [https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
 # Polishing TODOS:
-- "Place blocks! Press Start" for 5 seconds
 - Make timer show decimal places
 - make Level 7 the last level
 - get rid of level z
-- Fewer blocks in level 1
 - Show tile grid
 - Make unmovable tiles distinct, but not hard to look at
 - Publish game
 - Walker animation
 - Bold font
 - Orient so start button not in the way of labels
+- Next level button label
 
 # If I find myself w/ time:
 - Improve HUD (Make it clear that you've won vs loss)
