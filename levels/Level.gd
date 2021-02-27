@@ -131,13 +131,13 @@ func _determine_current_level() -> float:
 
 func _on_Timer_timeout():
 	$Walker.pause = true
-	$HUD.level_end("You Win!", true, _is_next_level())
+	$HUD.level_end("   You Win!", true, _is_next_level())
 	
 
 # body_entered doesn't work because Destination is NOT a body (see how Mobs were not Areas)
 # Not sure when to use which type?
 func _on_Walker_area_entered(area):
-	_game_over("LOSE")
+	_game_over("You Lose :(")
 
 
 # TODO Turn off when actually releasing the game

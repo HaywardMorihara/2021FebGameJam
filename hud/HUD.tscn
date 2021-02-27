@@ -1,9 +1,59 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://hud/HUD.gd" type="Script" id=1]
 [ext_resource path="res://hud/TimerLabel.gd" type="Script" id=2]
 [ext_resource path="res://hud/NumberOfBlocksLabel.gd" type="Script" id=3]
 [ext_resource path="res://hud/PlayerMessageLabel.gd" type="Script" id=4]
+[ext_resource path="res://assets/font/prstartk.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/font/prstart.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.764706, 0.054902, 0, 1 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+shadow_color = Color( 0.0117647, 0.0117647, 0.0117647, 0.6 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 10
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 12
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 12
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 12
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 12
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 12
+font_data = ExtResource( 6 )
 
 [node name="HUD" type="Control"]
 margin_right = 40.0
@@ -14,19 +64,24 @@ __meta__ = {
 }
 
 [node name="TitleLabel" type="Label" parent="."]
-margin_left = 197.807
-margin_top = 22.9974
-margin_right = 237.807
-margin_bottom = 36.9974
+margin_left = 175.978
+margin_top = 18.1498
+margin_right = 287.978
+margin_bottom = 34.1498
+custom_fonts/font = SubResource( 1 )
+text = "Level X"
 __meta__ = {
+"_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="LevelTimerLabel" type="Label" parent="."]
-margin_left = 33.4093
-margin_top = 21.7789
-margin_right = 73.4093
-margin_bottom = 35.7789
+margin_left = 16.0397
+margin_top = 21.0397
+margin_right = 136.04
+margin_bottom = 34.0397
+custom_fonts/font = SubResource( 2 )
+text = "0.00s left"
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true,
@@ -34,10 +89,13 @@ __meta__ = {
 }
 
 [node name="StartButton" type="Button" parent="."]
-visible = false
-margin_right = 64.0
-margin_bottom = 64.0
+margin_left = 192.651
+margin_top = 639.793
+margin_right = 256.651
+margin_bottom = 703.793
 hint_tooltip = "Press to Start"
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = SubResource( 3 )
 text = "Start"
 __meta__ = {
 "_edit_group_": true,
@@ -45,20 +103,25 @@ __meta__ = {
 }
 
 [node name="NumberOfBlocksLabel" type="Label" parent="."]
-margin_left = 363.042
-margin_top = 24.4997
-margin_right = 403.042
-margin_bottom = 38.4997
+margin_left = 339.608
+margin_top = 20.0
+margin_right = 435.608
+margin_bottom = 33.0
+custom_fonts/font = SubResource( 4 )
+text = "X blocks"
 script = ExtResource( 3 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_use_anchors_": false
 }
 
 [node name="PlayerMessageLabel" type="RichTextLabel" parent="."]
-margin_left = 137.0
+margin_left = 150.919
 margin_top = 327.0
-margin_right = 317.0
-margin_bottom = 377.0
+margin_right = 327.919
+margin_bottom = 397.0
+custom_fonts/normal_font = SubResource( 5 )
+text = "Place blocks! Press \"Start'!"
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true,
@@ -70,11 +133,11 @@ wait_time = 5.0
 one_shot = true
 
 [node name="RetryLevelButton" type="Button" parent="."]
-visible = false
-margin_left = 194.221
+margin_left = 187.086
 margin_top = 397.827
-margin_right = 258.221
+margin_right = 259.086
 margin_bottom = 447.827
+custom_fonts/font = SubResource( 6 )
 text = "Retry"
 __meta__ = {
 "_edit_group_": true,
@@ -82,11 +145,11 @@ __meta__ = {
 }
 
 [node name="NextLevelButton" type="Button" parent="."]
-visible = false
-margin_left = 182.617
-margin_top = 469.061
-margin_right = 276.617
-margin_bottom = 519.061
+margin_left = 142.184
+margin_top = 470.25
+margin_right = 310.184
+margin_bottom = 520.25
+custom_fonts/font = SubResource( 7 )
 text = "To Next Level"
 __meta__ = {
 "_edit_group_": true,
@@ -94,11 +157,11 @@ __meta__ = {
 }
 
 [node name="ReturnToMenuButton" type="Button" parent="."]
-visible = false
-margin_left = 155.771
-margin_top = 538.541
-margin_right = 301.771
-margin_bottom = 588.541
+margin_left = 102.257
+margin_top = 549.244
+margin_right = 342.257
+margin_bottom = 599.244
+custom_fonts/font = SubResource( 8 )
 text = "Return to Main Menu"
 __meta__ = {
 "_edit_group_": true,

@@ -2,7 +2,6 @@
 [https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
 # Polishing TODOS:
-- Bold font
 - Publish game
 
 # If I find myself w/ time:
