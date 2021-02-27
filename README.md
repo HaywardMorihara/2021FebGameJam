@@ -2,7 +2,6 @@
 [https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
 # Polishing TODOS:
-- Make sure level 8 opt was necessary
 - "Make Amaze!"
 - "Place blocks! Press Start" for 5 seconds
 - Make timer show decimal places
