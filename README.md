@@ -2,7 +2,6 @@
 [https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
 # Polishing TODOS:
-- Next level button label
 - Make timer show decimal places
 - Orient so start button not in the way of labels
 - Show tile grid

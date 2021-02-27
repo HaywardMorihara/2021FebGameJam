@@ -87,7 +87,7 @@ margin_left = 182.617
 margin_top = 469.061
 margin_right = 276.617
 margin_bottom = 519.061
-text = "Next Level: ?"
+text = "To Next Level"
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false

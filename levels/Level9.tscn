@@ -2,17 +2,17 @@
 
 [ext_resource path="res://levels/Level.gd" type="Script" id=1]
 [ext_resource path="res://destination/Destination.tscn" type="PackedScene" id=2]
-[ext_resource path="res://hud/HUD.tscn" type="PackedScene" id=3]
-[ext_resource path="res://maps/Navigation2D.tscn" type="PackedScene" id=4]
-[ext_resource path="res://walker/Walker.tscn" type="PackedScene" id=5]
+[ext_resource path="res://maps/Navigation2D.tscn" type="PackedScene" id=3]
+[ext_resource path="res://walker/Walker.tscn" type="PackedScene" id=4]
+[ext_resource path="res://hud/HUD.tscn" type="PackedScene" id=5]
 
 [node name="Level" type="Node"]
 script = ExtResource( 1 )
 number_of_blocks = 30
 
-[node name="Navigation2D" parent="." instance=ExtResource( 4 )]
+[node name="Navigation2D" parent="." instance=ExtResource( 3 )]
 
-[node name="Walker" parent="." instance=ExtResource( 5 )]
+[node name="Walker" parent="." instance=ExtResource( 4 )]
 position = Vector2( 418.12, 671.558 )
 speed = 400.0
 
@@ -23,7 +23,7 @@ position = Vector2( 156.696, 543.954 )
 wait_time = 6.75
 one_shot = true
 
-[node name="HUD" parent="." instance=ExtResource( 3 )]
+[node name="HUD" parent="." instance=ExtResource( 5 )]
 margin_right = 64.0
 margin_bottom = 64.0
 
