@@ -11,17 +11,34 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	if !pause:
+	if pause:
+		$AnimatedSprite.playing = false
+	else:
+		$AnimatedSprite.playing = true
 		var move_distance : = speed * delta
-		move_along_path(move_distance)
+		$AnimatedSprite.speed_scale = speed / 20
+		_move_along_path(move_distance)
 	
 
-func move_along_path(distance : float) -> void:
+func _move_along_path(distance : float) -> void:
 	var last_point : = position
 	for index in range(path.size()):
 		var distance_to_next = last_point.distance_to(path[0])
 		if distance <= distance_to_next and distance >= 0.0:
-			position = last_point.linear_interpolate(path[0], distance / distance_to_next)
+			var next_position = last_point.linear_interpolate(path[0], distance / distance_to_next)
+			if abs(next_position.x - position.x) > abs(next_position.y - position.y):
+				if next_position.x > position.x:
+					$AnimatedSprite.animation = "left"
+					$AnimatedSprite.flip_h = true
+				if next_position.x < position.x:
+					$AnimatedSprite.animation = "left"
+					$AnimatedSprite.flip_h = false
+			else:
+				if next_position.y > position.y:
+					$AnimatedSprite.animation = "down"
+				if next_position.y < position.y:
+					$AnimatedSprite.animation = "up"
+			position = next_position
 			break
 		elif path.size() == 1 and distance >= distance_to_next:
 			position = path[0]
