@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="2021FebGameJam"
+config/name="Make Amaze!"
 run/main_scene="res://menus/MainMenu.tscn"
 config/icon="res://icon.png"
 
