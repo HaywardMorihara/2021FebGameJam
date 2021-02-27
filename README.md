@@ -2,8 +2,6 @@
 [https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
 # Polishing TODOS:
-- Show tile grid
-- Make unmovable tiles distinct, but not hard to look at
 - Walker animation
 - Bold font
 - Publish game
