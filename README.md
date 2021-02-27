@@ -2,14 +2,14 @@
 [https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
 # Polishing TODOS:
+- Next level button label
 - Make timer show decimal places
+- Orient so start button not in the way of labels
 - Show tile grid
 - Make unmovable tiles distinct, but not hard to look at
-- Publish game
 - Walker animation
 - Bold font
-- Orient so start button not in the way of labels
-- Next level button label
+- Publish game
 
 # If I find myself w/ time:
 - Improve HUD (Make it clear that you've won vs loss)
