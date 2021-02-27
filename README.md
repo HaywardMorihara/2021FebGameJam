@@ -2,20 +2,29 @@
 [https://itch.io/jam/gdfgs-monthly-game-jam-2](https://itch.io/jam/gdfgs-monthly-game-jam-2)
 
 # Polishing TODOS:
-- I don't think level 4 is possible? Need to make the Timer less
-- Playtesting
-- Worldbuild (Shrinking snowman)
-- Redo Walker Sprite
-- Redo Tile 1
-- Redo Tile 2
-- Redo Tile 3
-- Adjust speeds, timers
+- Make sure level 8 opt was necessary
+- "Make Amaze!"
+- "Place blocks! Press Start" for 5 seconds
+- Make timer show decimal places
+- make Level 7 the last level
+- get rid of level z
+- Fewer blocks in level 1
+- Show tile grid
+- Make unmovable tiles distinct, but not hard to look at
+- Publish game
+- Walker animation
+- Bold font
+- Orient so start button not in the way of labels
+
+# If I find myself w/ time:
 - Improve HUD (Make it clear that you've won vs loss)
+- Worldbuild
+- Redo walker
+- Make tiles look nice
 - Improve Main Menu
 - Improve Level Menu
-- Publish
 
-# Enhanements
+# Enhancements
 - Stop player from placing a block that would make the level impossible
 - Sound Effects
 - App Icon
@@ -28,9 +37,10 @@
 - Multiple Destinations?
 
 # Level Design:
-- Starting positions
+- Starting/destination positions (central is harder)
 - Beginning # unmovable blocks
 - Limit # of blocks
+- Diagonals are faster...is this a feature or a bug?
 
 # Notes:
 - A little documentation on instancing/scene/shared properties: [https://www.reddit.com/r/godot/comments/drc82n/gdscript_instance_unique_material/](https://www.reddit.com/r/godot/comments/drc82n/gdscript_instance_unique_material/)
