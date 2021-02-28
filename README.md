@@ -8,6 +8,7 @@ Built with Godot
 
 # Notes:
 ## TODO
+- See WhatsApp and itch.io feedback
 - Improve HUD (Make it clear that you've won vs loss)
 - Worldbuild
 - Redo walker
@@ -37,3 +38,4 @@ Built with Godot
 - `adb devicces`
 - `adb install <YOUR_FILE>.apk`
 - Should be able to just unplug, unless I turned on FIle Transfer (by going into Setting > Connected Devices > USB and selectin file transfer)
+- OHHH I believe I have trouble exporting an Android app in NOT debug mode (that's when I get the keystore error, I think). Wonder if I need to generate a new key or something for that
