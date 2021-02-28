@@ -8,19 +8,19 @@
 
 [node name="Level" type="Node"]
 script = ExtResource( 1 )
-number_of_blocks = 30
+number_of_blocks = 28
 
 [node name="Navigation2D" parent="." instance=ExtResource( 3 )]
 
 [node name="Walker" parent="." instance=ExtResource( 4 )]
-position = Vector2( 418.12, 671.558 )
+position = Vector2( 414.34, 543.047 )
 speed = 400.0
 
 [node name="Destination" parent="." instance=ExtResource( 2 )]
-position = Vector2( 156.696, 543.954 )
+position = Vector2( 416.24, 159.678 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 6.75
+wait_time = 6.5
 one_shot = true
 
 [node name="HUD" parent="." instance=ExtResource( 5 )]
