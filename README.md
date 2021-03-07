@@ -8,21 +8,33 @@ Built with Godot
 
 # Notes:
 ## TODO
-- See WhatsApp and itch.io feedback
+- Drag and place blocks (instead of individual presses)
+- Make game playable right on Itch.io
+- Publish to Android store
+- Polish itch page (screenshots)
+- Clearer instructions on the first level
+- Make the walker shrink or something
+- Make it apparent that the blocks BLOCK - they aren't the path
+- Get rid of the first level, I think
+- Get rid of level 5 (redundant)
+- Make the "out of blocks" message not stop you from clicking things
+- Countdown front & center
+- Sound Effects
+- Music
+- Level redesign (blank levels boring new mechanic, diagonals are actually faster, more levels, each level should subvert or introduce a new mechanic, Shave off time allotted so that you need the absolute optimal path to make more of a challenge. Multiple walkers? multeipl destinations?)
+- There isn't one way to solve the problem. It's kinda fun to see other solutions. What could I do with this? Make a leaderboard? (could give me practice setting up a server, if I want that)
+
+# Probably Won't Do
+- Gameplay video/trailer
 - Improve HUD (Make it clear that you've won vs loss)
-- Worldbuild
+- Worldbuild?
 - Redo walker
 - Make tiles look nice
 - Improve Main Menu
 - Improve Level Menu
-- Sound Effects
-- Music
-- Drag and place blocks (instead of individual presses)
 - Have a "Best Time"
+- Make your own level
 - There are still bugs with the walker not completing the path sometimes. Unable to reproduce reliably
-- It seems like the longest maze is actually the horizontal lanes? vs any of the other optimal ones?
-- Multiple Walkers?
-- Multiple Destinations?
 
 ## Development
 - A little documentation on instancing/scene/shared properties: [https://www.reddit.com/r/godot/comments/drc82n/gdscript_instance_unique_material/](https://www.reddit.com/r/godot/comments/drc82n/gdscript_instance_unique_material/)
