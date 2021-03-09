@@ -8,7 +8,6 @@ Built with Godot
 
 # Notes:
 ## TODO
-- Drag and place blocks (instead of individual presses)
 - Clearer instructions on the first level
 - Make the walker shrink or something
 - Make it apparent that the blocks BLOCK - they aren't the path

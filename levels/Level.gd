@@ -4,22 +4,28 @@ extends Node
 export var number_of_blocks : int = 0
 export var start_level_message : String = ""
 
-
 var level_in_progress = false
+var input_placing_blocks = false
+var input_removing_blocks = false
+
 # TODO should be using a position node instead of walker on the map
 var walker_start_position : Vector2
+var walker_start_cell_position : Vector2
+var destination_cell_position : Vector2
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	walker_start_position = $Walker.position
 	$HUD.connect("hud_start_level", self, "_start_level")
 	$HUD.connect("hud_to_menu", self, "_to_menu")
 	$HUD.connect("hud_retry_level", self, "_restart_level")
 	$HUD.connect("hud_next_level", self, "_next_level")
 	$Timer.connect("timeout", self, "_on_Timer_timeout")
 	$Walker.connect("area_entered", self, "_on_Walker_area_entered")
-	var start_position = $Navigation2D/TileMap.map_to_world($Navigation2D/TileMap.world_to_map($Walker.position))
+	walker_start_position = $Walker.position
+	walker_start_cell_position = $Navigation2D/TileMap.world_to_map(walker_start_position)
+	destination_cell_position = $Navigation2D/TileMap.world_to_map($Destination.position)
+	var start_position = $Navigation2D/TileMap.map_to_world(walker_start_cell_position)
 	$HUD.level_loaded(_determine_current_level(), $Timer.wait_time, number_of_blocks, start_position)
 	if !start_level_message.empty():
 		$HUD.temp_message(start_level_message)
@@ -35,27 +41,43 @@ func _restart_level() -> void:
 	$HUD.level_loaded(_determine_current_level(), $Timer.wait_time, number_of_blocks, start_position)
 	if !start_level_message.empty():
 		$HUD.temp_message(start_level_message)
-#	get_tree().reload_current_scene()
 	
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventScreenTouch and event.pressed and !level_in_progress:
-		var cell_position : Vector2 = $Navigation2D/TileMap.world_to_map(event.position)
-		var walker_position = $Navigation2D/TileMap.world_to_map($Walker.position)
-		var destination_position = $Navigation2D/TileMap.world_to_map($Destination.position)
-		if cell_position != walker_position && cell_position != destination_position:
+	var cell_position : Vector2 = $Navigation2D/TileMap.world_to_map(event.position)
+	if cell_position != walker_start_cell_position && cell_position != destination_cell_position:
+		if event is InputEventScreenTouch and !event.pressed and !level_in_progress:
+			input_placing_blocks = false
+			input_removing_blocks = false
+		if event is InputEventScreenTouch and event.pressed and !level_in_progress:
 			if $Navigation2D/TileMap.get_cell(cell_position.x, cell_position.y) == 0:
-				if number_of_blocks <=0:
-					$HUD.temp_message("No more blocks to place!")
-					return
-				$Navigation2D/TileMap.set_cell(cell_position.x, cell_position.y, 1)
-				number_of_blocks -= 1
-				$HUD.update_number_of_blocks(number_of_blocks)
+				input_placing_blocks = true
+				_place_block(cell_position)
 			elif $Navigation2D/TileMap.get_cell(cell_position.x, cell_position.y) == 1:
-				$Navigation2D/TileMap.set_cell(cell_position.x, cell_position.y, 0)
-				number_of_blocks += 1
-				$HUD.update_number_of_blocks(number_of_blocks)
+				_remove_block(cell_position)
+				input_removing_blocks = true
+		if event is InputEventScreenDrag && !level_in_progress:
+			if input_placing_blocks:
+				if $Navigation2D/TileMap.get_cell(cell_position.x, cell_position.y) == 0:
+					_place_block(cell_position)
+			if input_removing_blocks:
+				if $Navigation2D/TileMap.get_cell(cell_position.x, cell_position.y) == 1:
+					_remove_block(cell_position)
 		
+
+func _place_block(cell_position : Vector2) -> void:
+	if number_of_blocks <=0:
+		$HUD.temp_message("No more blocks to place!")
+		return
+	$Navigation2D/TileMap.set_cell(cell_position.x, cell_position.y, 1)
+	number_of_blocks -= 1
+	$HUD.update_number_of_blocks(number_of_blocks)
+		
+		
+func _remove_block(cell_position : Vector2) -> void:
+	$Navigation2D/TileMap.set_cell(cell_position.x, cell_position.y, 0)
+	number_of_blocks += 1
+	$HUD.update_number_of_blocks(number_of_blocks)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
