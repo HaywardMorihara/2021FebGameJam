@@ -12,6 +12,7 @@ Built with Godot
 - Make it apparent that the blocks BLOCK - they aren't the path
 - Make the "out of blocks" message not stop you from clicking things (and go away when you click again)
 - Countdown front & center
+- Credits
 - Sound Effects
 - Music
 - Level redesign (blank levels boring new mechanic, diagonals are actually faster, more levels, each level should subvert or introduce a new mechanic, Shave off time allotted so that you need the absolute optimal path to make more of a challenge. Multiple walkers? multeipl destinations?)
