@@ -23,7 +23,7 @@ speed = 400.0
 position = Vector2( 220.878, 33.0778 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 5.5
 one_shot = true
 
 [node name="HUD" parent="." instance=ExtResource( 4 )]

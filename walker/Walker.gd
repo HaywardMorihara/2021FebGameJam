@@ -5,6 +5,8 @@ export var speed : = 400.0
 var path : = PoolVector2Array() setget set_path
 var pause = false
 
+var time_elapsed : = 0.0
+var level_time : float
 
 func _ready() -> void:
 	set_process(false)
@@ -13,7 +15,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if pause:
 		$AnimatedSprite.playing = false
-	else:
+	else:	
+		time_elapsed += delta
+		scale.y = (level_time - time_elapsed * 0.9) / level_time
 		$AnimatedSprite.playing = true
 		var move_distance : = speed * delta
 		$AnimatedSprite.speed_scale = speed / 20

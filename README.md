@@ -8,14 +8,14 @@ Built with Godot
 
 # Notes:
 ## TODO
-- Make the walker shrink or something
+- Last level unexpectedly win? And not the necessary number of blocks works?
 - Make it apparent that the blocks BLOCK - they aren't the path
 - Make the "out of blocks" message not stop you from clicking things (and go away when you click again)
 - Countdown front & center
 - Credits
 - Sound Effects
 - Music
-- Level redesign (blank levels boring new mechanic, diagonals are actually faster, more levels, each level should subvert or introduce a new mechanic, Shave off time allotted so that you need the absolute optimal path to make more of a challenge. Multiple walkers? multeipl destinations?)
+- Level redesign (corners can be cut, diagonals not needed, blank levels boring new mechanic, diagonals are actually faster, more levels, each level should subvert or introduce a new mechanic, Shave off time allotted so that you need the absolute optimal path to make more of a challenge. Multiple walkers? multeipl destinations?)
 - There isn't one way to solve the problem. It's kinda fun to see other solutions. What could I do with this? Make a leaderboard? (could give me practice setting up a server, if I want that)
 - Make game playable right on Itch.io
 - Publish to Android store

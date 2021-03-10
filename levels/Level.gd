@@ -22,6 +22,7 @@ func _ready():
 	$HUD.connect("hud_next_level", self, "_next_level")
 	$Timer.connect("timeout", self, "_on_Timer_timeout")
 	$Walker.connect("area_entered", self, "_on_Walker_area_entered")
+	$Walker.level_time = $Timer.wait_time
 	walker_start_position = $Walker.position
 	walker_start_cell_position = $Navigation2D/TileMap.world_to_map(walker_start_position)
 	destination_cell_position = $Navigation2D/TileMap.world_to_map($Destination.position)
@@ -35,6 +36,7 @@ func _ready():
 func _restart_level() -> void:
 	level_in_progress = false
 	$Walker.position = walker_start_position
+	$Walker.time_elapsed = 0.0
 	$Timer.start()
 	$Timer.paused = true
 	var start_position = $Navigation2D/TileMap.map_to_world($Navigation2D/TileMap.world_to_map($Walker.position))

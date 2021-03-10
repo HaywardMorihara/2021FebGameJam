@@ -8,7 +8,7 @@
 
 [node name="Level" type="Node"]
 script = ExtResource( 1 )
-number_of_blocks = 25
+number_of_blocks = 24
 
 [node name="Navigation2D" parent="." instance=ExtResource( 4 )]
 
