@@ -8,12 +8,9 @@ Built with Godot
 
 # Notes:
 ## TODO
-- Clearer instructions on the first level
 - Make the walker shrink or something
 - Make it apparent that the blocks BLOCK - they aren't the path
-- Get rid of the first level, I think
-- Get rid of level 5 (redundant)
-- Make the "out of blocks" message not stop you from clicking things
+- Make the "out of blocks" message not stop you from clicking things (and go away when you click again)
 - Countdown front & center
 - Sound Effects
 - Music

@@ -18,7 +18,7 @@ outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxFlat" id=9]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.764706, 0.054902, 0, 1 )
 corner_radius_top_left = 1
 corner_radius_top_right = 1
@@ -26,32 +26,32 @@ corner_radius_bottom_right = 1
 corner_radius_bottom_left = 1
 shadow_color = Color( 0.0117647, 0.0117647, 0.0117647, 0.6 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=4]
 size = 10
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=5]
 size = 12
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 use_mipmaps = true
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=6]
 size = 12
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 7 )
-
-[sub_resource type="DynamicFont" id=6]
-size = 12
-font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=7]
 size = 12
 font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=8]
+size = 12
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=9]
 size = 12
 font_data = ExtResource( 6 )
 
@@ -94,8 +94,8 @@ margin_top = 639.793
 margin_right = 256.651
 margin_bottom = 703.793
 hint_tooltip = "Press to Start"
-custom_styles/normal = SubResource( 9 )
-custom_fonts/font = SubResource( 3 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 text = "Start"
 __meta__ = {
 "_edit_group_": true,
@@ -107,7 +107,7 @@ margin_left = 339.608
 margin_top = 20.0
 margin_right = 435.608
 margin_bottom = 33.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "X blocks"
 script = ExtResource( 3 )
 __meta__ = {
@@ -116,11 +116,11 @@ __meta__ = {
 }
 
 [node name="PlayerMessageLabel" type="RichTextLabel" parent="."]
-margin_left = 150.919
+margin_left = 151.0
 margin_top = 327.0
-margin_right = 327.919
-margin_bottom = 397.0
-custom_fonts/normal_font = SubResource( 5 )
+margin_right = 328.0
+margin_bottom = 471.0
+custom_fonts/normal_font = SubResource( 6 )
 text = "Place blocks! Press \"Start'!"
 script = ExtResource( 4 )
 __meta__ = {
@@ -137,7 +137,7 @@ margin_left = 187.086
 margin_top = 397.827
 margin_right = 259.086
 margin_bottom = 447.827
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 text = "Retry"
 __meta__ = {
 "_edit_group_": true,
@@ -149,7 +149,7 @@ margin_left = 142.184
 margin_top = 470.25
 margin_right = 310.184
 margin_bottom = 520.25
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 8 )
 text = "To Next Level"
 __meta__ = {
 "_edit_group_": true,
@@ -161,7 +161,7 @@ margin_left = 102.257
 margin_top = 549.244
 margin_right = 342.257
 margin_bottom = 599.244
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 9 )
 text = "Return to Main Menu"
 __meta__ = {
 "_edit_group_": true,
