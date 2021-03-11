@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://hud/HUD.gd" type="Script" id=1]
 [ext_resource path="res://hud/TimerLabel.gd" type="Script" id=2]
 [ext_resource path="res://hud/NumberOfBlocksLabel.gd" type="Script" id=3]
 [ext_resource path="res://hud/PlayerMessageLabel.gd" type="Script" id=4]
+[ext_resource path="res://hud/CountdownLabel.gd" type="Script" id=5]
 [ext_resource path="res://assets/font/prstartk.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://assets/font/prstart.ttf" type="DynamicFontData" id=7]
 
@@ -37,6 +38,12 @@ outline_color = Color( 0, 0, 0, 1 )
 use_mipmaps = true
 font_data = ExtResource( 6 )
 
+[sub_resource type="DynamicFont" id=10]
+size = 32
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
 [sub_resource type="DynamicFont" id=6]
 size = 12
 outline_size = 1
@@ -64,9 +71,9 @@ __meta__ = {
 }
 
 [node name="TitleLabel" type="Label" parent="."]
-margin_left = 175.978
+margin_left = 178.356
 margin_top = 18.1498
-margin_right = 287.978
+margin_right = 290.356
 margin_bottom = 34.1498
 custom_fonts/font = SubResource( 1 )
 text = "Level X"
@@ -75,13 +82,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LevelTimerLabel" type="Label" parent="."]
-margin_left = 16.0397
-margin_top = 21.0397
-margin_right = 136.04
-margin_bottom = 34.0397
+[node name="LevelTimeLabel" type="Label" parent="."]
+margin_left = 11.2829
+margin_top = 18.6613
+margin_right = 143.283
+margin_bottom = 31.6613
 custom_fonts/font = SubResource( 2 )
-text = "0.00s left"
+text = "Delay 0.00s"
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true,
@@ -112,6 +119,18 @@ text = "X blocks"
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CountdownLabel" type="Label" parent="."]
+margin_left = 147.217
+margin_top = 277.027
+margin_right = 228.217
+margin_bottom = 297.027
+custom_fonts/font = SubResource( 10 )
+text = "0.00s"
+script = ExtResource( 5 )
+__meta__ = {
 "_edit_use_anchors_": false
 }
 

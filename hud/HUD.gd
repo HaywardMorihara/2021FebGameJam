@@ -13,7 +13,8 @@ func level_loaded(level_number : float, level_time : float, number_of_blocks : f
 	$ReturnToMenuButton.hide()
 	$RetryLevelButton.hide()
 	$NextLevelButton.hide()
-	$LevelTimerLabel.set_time(level_time)
+	$LevelTimeLabel.set_time(level_time)
+	$CountdownLabel.hide()
 	$StartButton.rect_position = start_position
 	$StartButton.show()
 	$NumberOfBlocksLabel.set_number_of_blocks(number_of_blocks)
@@ -21,7 +22,8 @@ func level_loaded(level_number : float, level_time : float, number_of_blocks : f
 	
 	
 func level_update(time_left : float) -> void:
-	$LevelTimerLabel.set_time(time_left)
+	$CountdownLabel.show()
+	$CountdownLabel.set_time(time_left)
 	
 	
 func update_number_of_blocks(number_of_blocks : float) -> void:

@@ -88,7 +88,7 @@ func _process(delta):
 		$HUD.level_update(time_left)
 
 
-func set_path() -> void:
+func _set_path() -> bool:
 	var new_path : PoolVector2Array = $Navigation2D.get_simple_path(
 		$Walker.global_position,
 		$Destination.global_position,
@@ -96,10 +96,11 @@ func set_path() -> void:
 	)
 	if new_path.empty():
 		_game_over("You must leave a path to the destination!")
-		return
+		return false
 	$Walker.path = new_path
 	$Walker.pause = false
 	$Timer.paused = false
+	return true
 #	_create_line(new_path)
 
 
@@ -112,8 +113,9 @@ func _game_over(text : String) -> void:
 # Signals
 
 func _start_level():
+	if !_set_path():
+		return
 	level_in_progress = true
-	set_path()
 	$Timer.start()
 	
 
