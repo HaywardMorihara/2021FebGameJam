@@ -20,6 +20,7 @@ func _ready():
 	$HUD.connect("hud_to_menu", self, "_to_menu")
 	$HUD.connect("hud_retry_level", self, "_restart_level")
 	$HUD.connect("hud_next_level", self, "_next_level")
+	$HUD.connect("hud_to_credits", self, "_to_credits")
 	$Timer.connect("timeout", self, "_on_Timer_timeout")
 	$Walker.connect("area_entered", self, "_on_Walker_area_entered")
 	$Walker.level_time = $Timer.wait_time
@@ -121,6 +122,10 @@ func _start_level():
 
 func _to_menu():
 	get_tree().change_scene("res://menus/MainMenu.tscn")
+	
+	
+func _to_credits():
+	get_tree().change_scene("res://menus/CreditsMenu.tscn")
 
 
 func _next_level():

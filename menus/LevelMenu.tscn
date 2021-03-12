@@ -1,14 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://menus/VBoxContainer.gd" type="Script" id=1]
 [ext_resource path="res://menus/elements/Background.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/font/prstart.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://menus/MainMenuButton.gd" type="Script" id=4]
-
-[sub_resource type="DynamicFont" id=1]
-outline_size = 3
-outline_color = Color( 0.0117647, 0.0117647, 0.0117647, 1 )
-font_data = ExtResource( 3 )
+[ext_resource path="res://menus/elements/MainMenuButton.tscn" type="PackedScene" id=3]
 
 [node name="LevelMenu" type="Control"]
 anchor_right = 1.0
@@ -20,14 +14,8 @@ anchor_bottom = 1.0
 margin_right = 448.0
 margin_bottom = 640.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="MainMenuButton" type="Button" parent="."]
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = -64.0
-margin_right = 3.05176e-05
-custom_fonts/font = SubResource( 1 )
-text = "Return to Main Menu"
-script = ExtResource( 4 )
-[connection signal="pressed" from="MainMenuButton" to="MainMenuButton" method="_on_MainMenuButton_pressed"]
+[node name="MainMenuButton" parent="." instance=ExtResource( 3 )]

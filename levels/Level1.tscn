@@ -9,7 +9,7 @@
 [node name="Level" type="Node"]
 script = ExtResource( 1 )
 number_of_blocks = 1
-start_level_message = "Place blocks to keep Sam from the food!"
+start_level_message = "Place BLOCKS to keep HIM from the FOOD!"
 
 [node name="Navigation2D" parent="." instance=ExtResource( 3 )]
 

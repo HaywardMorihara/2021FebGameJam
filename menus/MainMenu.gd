@@ -7,3 +7,7 @@ func _on_StartGameButton_pressed():
 
 func _on_LevelSelectButton_pressed():
 	get_tree().change_scene("res://menus/LevelMenu.tscn")
+
+
+func _on_CreditsButton_pressed():
+	get_tree().change_scene("res://menus/CreditsMenu.tscn")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://hud/HUD.gd" type="Script" id=1]
 [ext_resource path="res://hud/TimerLabel.gd" type="Script" id=2]
@@ -38,27 +38,31 @@ outline_color = Color( 0, 0, 0, 1 )
 use_mipmaps = true
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=10]
+[sub_resource type="DynamicFont" id=6]
 size = 32
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=7]
 size = 12
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 7 )
-
-[sub_resource type="DynamicFont" id=7]
-size = 12
-font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=8]
 size = 12
 font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=9]
+size = 12
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 12
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=11]
 size = 12
 font_data = ExtResource( 6 )
 
@@ -71,10 +75,10 @@ __meta__ = {
 }
 
 [node name="TitleLabel" type="Label" parent="."]
-margin_left = 178.356
-margin_top = 18.1498
-margin_right = 290.356
-margin_bottom = 34.1498
+margin_left = 160.518
+margin_top = 16.9606
+margin_right = 272.518
+margin_bottom = 32.9606
 custom_fonts/font = SubResource( 1 )
 text = "Level X"
 __meta__ = {
@@ -83,12 +87,12 @@ __meta__ = {
 }
 
 [node name="LevelTimeLabel" type="Label" parent="."]
-margin_left = 11.2829
-margin_top = 18.6613
-margin_right = 143.283
-margin_bottom = 31.6613
+margin_left = 22.8921
+margin_top = 21.3784
+margin_right = 82.8921
+margin_bottom = 34.3784
 custom_fonts/font = SubResource( 2 )
-text = "Delay 0.00s"
+text = "0.00s"
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true,
@@ -110,10 +114,10 @@ __meta__ = {
 }
 
 [node name="NumberOfBlocksLabel" type="Label" parent="."]
-margin_left = 339.608
-margin_top = 20.0
-margin_right = 435.608
-margin_bottom = 33.0
+margin_left = 332.473
+margin_top = 18.8108
+margin_right = 428.473
+margin_bottom = 31.8108
 custom_fonts/font = SubResource( 5 )
 text = "X blocks"
 script = ExtResource( 3 )
@@ -127,7 +131,7 @@ margin_left = 147.217
 margin_top = 277.027
 margin_right = 228.217
 margin_bottom = 297.027
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 6 )
 text = "0.00s"
 script = ExtResource( 5 )
 __meta__ = {
@@ -139,7 +143,7 @@ margin_left = 151.0
 margin_top = 327.0
 margin_right = 328.0
 margin_bottom = 471.0
-custom_fonts/normal_font = SubResource( 6 )
+custom_fonts/normal_font = SubResource( 7 )
 text = "Place blocks! Press \"Start'!"
 script = ExtResource( 4 )
 __meta__ = {
@@ -156,8 +160,21 @@ margin_left = 187.086
 margin_top = 397.827
 margin_right = 259.086
 margin_bottom = 447.827
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 8 )
 text = "Retry"
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CreditsButton" type="Button" parent="."]
+visible = false
+margin_left = 178.381
+margin_top = 474.494
+margin_right = 274.381
+margin_bottom = 524.494
+custom_fonts/font = SubResource( 9 )
+text = "Credits"
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
@@ -168,7 +185,7 @@ margin_left = 142.184
 margin_top = 470.25
 margin_right = 310.184
 margin_bottom = 520.25
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 10 )
 text = "To Next Level"
 __meta__ = {
 "_edit_group_": true,
@@ -180,7 +197,7 @@ margin_left = 102.257
 margin_top = 549.244
 margin_right = 342.257
 margin_bottom = 599.244
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 11 )
 text = "Return to Main Menu"
 __meta__ = {
 "_edit_group_": true,
@@ -190,5 +207,6 @@ __meta__ = {
 [connection signal="gui_input" from="PlayerMessageLabel" to="PlayerMessageLabel" method="_on_PlayerMessageLabel_gui_input"]
 [connection signal="timeout" from="PlayerMessageLabel/PlayerMessageTimer" to="PlayerMessageLabel" method="_on_PlayerMessageTimer_timeout"]
 [connection signal="pressed" from="RetryLevelButton" to="." method="_on_RetryLevelButton_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_CreditsButton_pressed"]
 [connection signal="pressed" from="NextLevelButton" to="." method="_on_NextLevelButton_pressed"]
 [connection signal="pressed" from="ReturnToMenuButton" to="." method="_on_ReturnToMenuButton_pressed"]

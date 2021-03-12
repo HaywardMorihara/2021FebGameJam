@@ -8,8 +8,6 @@ Built with Godot
 
 # Notes:
 ## TODO
-- Touch up the level menu
-- Credits
 - Sound Effects (check out opengameart.org)
 - Music
 - Level redesign (corners can be cut, diagonals not needed, blank levels boring new mechanic, diagonals are actually faster, more levels, each level should subvert or introduce a new mechanic, Shave off time allotted so that you need the absolute optimal path to make more of a challenge. Multiple walkers? multeipl destinations?)
