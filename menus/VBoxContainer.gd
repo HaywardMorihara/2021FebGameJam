@@ -8,11 +8,10 @@ var level_button_scene = preload("res://menus/elements/LevelButton.tscn")
 func _ready():
 	var level_scenes = _find_level_scenes()
 	level_scenes.sort()
-	print(level_scenes)
-	for level_scene in level_scenes:
+	for i in len(level_scenes):
+		var level_scene = level_scenes[i]
 		var level_button_scene_instance = level_button_scene.instance()
-		level_button_scene_instance.text = level_scene
-		level_button_scene_instance.rect_min_size.y = 50
+		level_button_scene_instance.text = "Level %s" % (i + 1)
 		level_button_scene_instance.connect("pressed", self, "_on_Level_Button_pressed", [level_scene])
 		add_child(level_button_scene_instance)
 	
@@ -35,5 +34,4 @@ func _find_level_scenes() -> Array:
 
 func _on_Level_Button_pressed(level : String) -> void:
 	var level_path = "res://levels/%s" % [level]
-	print(level_path)
 	get_tree().change_scene(level_path)
