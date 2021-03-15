@@ -22,6 +22,8 @@ func _process(delta: float) -> void:
 		var move_distance : = speed * delta
 		$AnimatedSprite.speed_scale = speed / 20
 		_move_along_path(move_distance)
+		if !$FootstepSound.playing:
+			$FootstepSound.play()
 	
 
 func _move_along_path(distance : float) -> void:

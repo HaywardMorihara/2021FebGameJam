@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Fire 4.ogg-1f94a7c1f6ff907a441f00bc98307f74.oggstr"
+
+[deps]
+
+source_file="res://assets/sound/MiscLasers/Fire 4.ogg"
+dest_files=[ "res://.import/Fire 4.ogg-1f94a7c1f6ff907a441f00bc98307f74.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
