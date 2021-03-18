@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/snow_step_dry-02.wav-620c78732a33fce4109e8474528ef19d.sample"
+
+[deps]
+
+source_file="res://assets/sound/qubodup-snow_steps_dry/snow_step_dry-02.wav"
+dest_files=[ "res://.import/snow_step_dry-02.wav-620c78732a33fce4109e8474528ef19d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

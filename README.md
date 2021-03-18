@@ -8,16 +8,17 @@ Built with Godot
 
 # Notes:
 ## TODO
-- Sound Effects (check out opengameart.org)
 - Music
 - Level redesign (corners can be cut, diagonals not needed, blank levels boring new mechanic, diagonals are actually faster, more levels, each level should subvert or introduce a new mechanic, Shave off time allotted so that you need the absolute optimal path to make more of a challenge. Multiple walkers? multeipl destinations?)
 - May want to consider improving the visuals (clear that blocks BLOCK)
-- There isn't one way to solve the problem. It's kinda fun to see other solutions. What could I do with this? Make a leaderboard? (could give me practice setting up a server, if I want that)
 - Make game playable right on Itch.io
 - Publish to Android store
 - Polish itch page (screenshots)
+- Game over / win sound effects (opengameart.org)
+- Change foostep sound effects
 
 # Probably Won't Do
+- There isn't one way to solve the problem. It's kinda fun to see other solutions. What could I do with this? Make a leaderboard? (could give me practice setting up a server, if I want that)
 - Gameplay video/trailer
 - Improve HUD (Make it clear that you've won vs loss)
 - Worldbuild?

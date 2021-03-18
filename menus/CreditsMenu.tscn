@@ -44,8 +44,13 @@ margin_bottom = 574.0
 custom_fonts/normal_font = SubResource( 2 )
 text = "Thanks to...
 
-codeman38 for the font  (from  zone38.net)
+codeman38 (zone38.net) - font 
+
+fubodup - footstep sound effects 
 
 And Jenna, Uncle William, and all my other play testers!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="MainMenuButton" parent="." instance=ExtResource( 2 )]

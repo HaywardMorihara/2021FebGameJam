@@ -36,8 +36,7 @@ func _ready():
 # TODO Combine this into the normal level start method
 func _restart_level() -> void:
 	level_in_progress = false
-	$Walker.position = walker_start_position
-	$Walker.time_elapsed = 0.0
+	$Walker.reset(walker_start_position)
 	$Timer.start()
 	$Timer.paused = true
 	var start_position = $Navigation2D/TileMap.map_to_world($Navigation2D/TileMap.world_to_map($Walker.position))
