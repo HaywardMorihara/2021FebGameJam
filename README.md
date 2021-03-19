@@ -8,7 +8,9 @@ Built with Godot
 
 # Notes:
 ## TODO
-- Level redesign (corners can be cut, diagonals not needed, blank levels boring new mechanic, diagonals are actually faster, more levels, each level should subvert or introduce a new mechanic, Shave off time allotted so that you need the absolute optimal path to make more of a challenge. Multiple walkers? multeipl destinations?)s
+- Try multiple walkers or multiple destinations?
+- New Levels
+- PlayTest
 - Make game playable right on Itch.io
 - Publish to Android store
 - Polish itch page (screenshots)
@@ -34,10 +36,13 @@ Built with Godot
 - I wonder if it's a bad practice to be modifying the scene child the way I am with the tilemap for the map
 
 ## Level Design:
+- Each level should subvert or introduce a new mechanic
 - Starting/destination positions (central is harder)
 - Beginning # unmovable blocks
 - Limit # of blocks
 - Diagonals are faster...is this a feature or a bug?
+- Blank levels are boring
+- Some blocks are redundant
 
 ## Android Commands
 - `adb devicces`
