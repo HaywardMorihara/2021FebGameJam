@@ -19,6 +19,10 @@ config/name="Make Amaze!"
 run/main_scene="res://menus/MainMenu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+LevelMusic="*res://audio/LevelMusic.tscn"
+
 [display]
 
 window/size/width=448

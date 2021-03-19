@@ -31,6 +31,8 @@ func _ready():
 	$HUD.level_loaded(_determine_current_level(), $Timer.wait_time, number_of_blocks, start_position)
 	if !start_level_message.empty():
 		$HUD.temp_message(start_level_message)
+	if not LevelMusic.playing:
+		LevelMusic.play()
 	
 	
 # TODO Combine this into the normal level start method

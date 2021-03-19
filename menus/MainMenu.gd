@@ -1,5 +1,8 @@
 extends Control
 
+func _ready() -> void:
+	if LevelMusic.playing:
+		LevelMusic.stop()
 
 func _on_StartGameButton_pressed():
 	get_tree().change_scene("res://levels/Level1.tscn")
