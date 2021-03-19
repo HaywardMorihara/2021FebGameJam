@@ -8,6 +8,7 @@ Built with Godot
 
 # Notes:
 ## TODO
+- Noise when you place a block
 - Try multiple walkers or multiple destinations?
 - New Levels
 - PlayTest
