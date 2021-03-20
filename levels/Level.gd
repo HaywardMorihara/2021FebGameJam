@@ -76,6 +76,7 @@ func _place_block(cell_position : Vector2) -> void:
 	$Navigation2D/TileMap.set_cell(cell_position.x, cell_position.y, 1)
 	number_of_blocks -= 1
 	$HUD.update_number_of_blocks(number_of_blocks)
+	$BlockPlacementSound.play()
 		
 		
 func _remove_block(cell_position : Vector2) -> void:

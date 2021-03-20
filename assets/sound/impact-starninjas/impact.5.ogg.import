@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/impact.5.ogg-0fb5956a0768b66f456b00de83f7a9bf.oggstr"
+
+[deps]
+
+source_file="res://assets/sound/impact-starninjas/impact.5.ogg"
+dest_files=[ "res://.import/impact.5.ogg-0fb5956a0768b66f456b00de83f7a9bf.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -8,7 +8,6 @@ Built with Godot
 
 # Notes:
 ## TODO
-- Noise when you place a block
 - Try multiple walkers or multiple destinations?
 - New Levels
 - PlayTest
@@ -17,6 +16,7 @@ Built with Godot
 - Polish itch page (screenshots)
 
 # Probably Won't Do
+- Levels inherit, instead of copyings
 - May want to consider improving the visuals (clear that blocks BLOCK)
 - Game over / win sound effects (opengameart.org)
 - Change foostep sound effects

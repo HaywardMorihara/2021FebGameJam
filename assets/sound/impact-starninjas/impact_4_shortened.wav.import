@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/impact_4_shortened.wav-51b7bb016188c90b1ea9fd762b0dc7a9.sample"
+
+[deps]
+
+source_file="res://assets/sound/impact-starninjas/impact_4_shortened.wav"
+dest_files=[ "res://.import/impact_4_shortened.wav-51b7bb016188c90b1ea9fd762b0dc7a9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
