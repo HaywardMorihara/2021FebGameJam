@@ -147,7 +147,11 @@ func _determine_next_level() -> String:
 
 func _estimate_next_level_filename() -> String:
 	var next_level_number = _determine_current_level() + 1
-	var next_level_filename = "res://levels/Level%d.tscn" % next_level_number
+	var next_level_filename : String
+	if next_level_number < 10:
+		next_level_filename = "res://levels/Level0%d.tscn" % next_level_number
+	else:
+		next_level_filename = "res://levels/Level%d.tscn" % next_level_number
 	return next_level_filename
 
 
