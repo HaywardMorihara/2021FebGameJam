@@ -20,7 +20,9 @@ speed = 400.0
 [node name="Destination" parent="." instance=ExtResource( 2 )]
 position = Vector2( 156.696, 543.954 )
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." groups=[
+"destinations",
+]]
 wait_time = 7.0
 one_shot = true
 

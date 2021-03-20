@@ -5,7 +5,7 @@ func _ready() -> void:
 		LevelMusic.stop()
 
 func _on_StartGameButton_pressed():
-	get_tree().change_scene("res://levels/Level1.tscn")
+	get_tree().change_scene("res://levels/Level01.tscn")
 
 
 func _on_LevelSelectButton_pressed():

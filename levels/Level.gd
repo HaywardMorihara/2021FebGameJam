@@ -11,11 +11,11 @@ var input_removing_blocks = false
 # TODO should be using a position node instead of walker on the map
 var walker_start_position : Vector2
 var walker_start_cell_position : Vector2
-var destination_cell_position : Vector2
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$HUD.show()
 	$HUD.connect("hud_start_level", self, "_start_level")
 	$HUD.connect("hud_to_menu", self, "_to_menu")
 	$HUD.connect("hud_retry_level", self, "_restart_level")
@@ -26,7 +26,6 @@ func _ready():
 	$Walker.level_time = $Timer.wait_time
 	walker_start_position = $Walker.position
 	walker_start_cell_position = $Navigation2D/TileMap.world_to_map(walker_start_position)
-	destination_cell_position = $Navigation2D/TileMap.world_to_map($Destination.position)
 	var start_position = $Navigation2D/TileMap.map_to_world(walker_start_cell_position)
 	$HUD.level_loaded(_determine_current_level(), $Timer.wait_time, number_of_blocks, start_position)
 	if !start_level_message.empty():
@@ -49,7 +48,7 @@ func _restart_level() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	var cell_position : Vector2 = $Navigation2D/TileMap.world_to_map(event.position)
-	if cell_position != walker_start_cell_position && cell_position != destination_cell_position:
+	if cell_position != walker_start_cell_position && not _is_on_dest_position(cell_position):
 		if event is InputEventScreenTouch and !event.pressed and !level_in_progress:
 			input_placing_blocks = false
 			input_removing_blocks = false
@@ -92,13 +91,9 @@ func _process(delta):
 
 
 func _set_path() -> bool:
-	var new_path : PoolVector2Array = $Navigation2D.get_simple_path(
-		$Walker.global_position,
-		$Destination.global_position,
-		false
-	)
+	var new_path = _find_shortest_path()
 	if new_path.empty():
-		_game_over("You must leave a path to the destination!")
+		_game_over("You must leave a path to all destinations!")
 		return false
 	$Walker.path = new_path
 	$Walker.pause = false
@@ -178,3 +173,36 @@ func _create_line(new_path : PoolVector2Array) -> void:
 	var line = Line2D.new()
 	line.points = new_path
 	add_child(line)
+
+
+func _is_on_dest_position(cell_position : Vector2):
+	for dest in get_tree().get_nodes_in_group("destinations"):
+		var dest_cell_position = $Navigation2D/TileMap.world_to_map(dest.position)
+		if cell_position == dest_cell_position:
+			return true
+	return false
+
+
+func _find_shortest_path():
+	var shortest_path : PoolVector2Array
+	var shortest_path_len : float
+	for dest in get_tree().get_nodes_in_group("destinations"):
+		var new_path : PoolVector2Array = $Navigation2D.get_simple_path(
+			$Walker.global_position,
+			dest.global_position,
+			false
+		)
+		if new_path.empty():
+			return new_path
+		var new_path_len = _calc_total_distance(new_path)
+		if shortest_path.empty() or shortest_path_len > new_path_len:
+			shortest_path = new_path 
+			shortest_path_len = new_path_len
+	return shortest_path
+
+
+func _calc_total_distance(path : PoolVector2Array) -> float:
+	var total_distance : float = 0.0
+	for i in range(path.size()-1):
+		total_distance += path[i].distance_to(path[i+1])
+	return total_distance

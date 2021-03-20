@@ -8,8 +8,6 @@ Built with Godot
 
 # Notes:
 ## TODO
-- Try multiple walkers or multiple destinations?
-- New Levels
 - PlayTest
 - Make game playable right on Itch.io
 - Publish to Android store

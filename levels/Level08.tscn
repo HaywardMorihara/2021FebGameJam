@@ -20,7 +20,9 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 position = Vector2( 27.5444, 609.823 )
 speed = 400.0
 
-[node name="Destination" parent="." instance=ExtResource( 2 )]
+[node name="Destination" parent="." groups=[
+"destinations",
+] instance=ExtResource( 2 )]
 position = Vector2( 416.24, 96.682 )
 
 [node name="Timer" type="Timer" parent="."]
