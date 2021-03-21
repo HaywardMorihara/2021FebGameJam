@@ -8,10 +8,8 @@ Built with Godot
 
 # Notes:
 ## TODO
-- PlayTest
-- Make game playable right on Itch.io
+- PlayTest and publish v2
 - Publish to Android store
-- Polish itch page (screenshots)
 
 # Probably Won't Do
 - Levels inherit, instead of copyings
