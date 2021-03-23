@@ -9,7 +9,7 @@ Built with Godot
 # Notes:
 ## TODO
 - Level 11 bug
-- PlayTest and publish v2
+- Publish v2
 - Publish to Android store
 https://godotengine.org/qa/265/how-release-project-google-play-store-android-release-mode
 https://docs.godotengine.org/en/3.2/getting_started/step_by_step/exporting.html#android
