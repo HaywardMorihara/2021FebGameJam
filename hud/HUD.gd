@@ -36,8 +36,9 @@ func level_end(message : String, win : bool, is_next_level : bool) -> void:
 	$PlayerMessageLabel.text = message
 	$PlayerMessageLabel.show()
 	$ReturnToMenuButton.show()
-	if !win:
-		$RetryLevelButton.show()
+	$RetryLevelButton.show()
+	if win:
+		$RetryLevelButton.text = "Redo"
 	if win && is_next_level:
 		$NextLevelButton.show()
 	if win && !is_next_level:

@@ -182,9 +182,9 @@ __meta__ = {
 
 [node name="NextLevelButton" type="Button" parent="."]
 margin_left = 142.184
-margin_top = 470.25
+margin_top = 476.196
 margin_right = 310.184
-margin_bottom = 520.25
+margin_bottom = 526.196
 custom_fonts/font = SubResource( 10 )
 text = "To Next Level"
 __meta__ = {
