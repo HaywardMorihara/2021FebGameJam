@@ -8,6 +8,7 @@ Built with Godot
 
 # Notes:
 ## TODO
+- Level 11 bug
 - PlayTest and publish v2
 - Publish to Android store
 https://godotengine.org/qa/265/how-release-project-google-play-store-android-release-mode
@@ -28,7 +29,7 @@ https://docs.godotengine.org/en/3.2/getting_started/step_by_step/exporting.html#
 - Improve Level Menu
 - Have a "Best Time"
 - Make your own level
-- There are still bugs with the walker not completing the path sometimes. Unable to reproduce reliably
+- There are still bugs with the walker not completing the path sometimes. Unable to reproduce reliably. For instance, if you start level 11 w/o placing any blocks, he takes a weird path
 
 ## Development
 - A little documentation on instancing/scene/shared properties: [https://www.reddit.com/r/godot/comments/drc82n/gdscript_instance_unique_material/](https://www.reddit.com/r/godot/comments/drc82n/gdscript_instance_unique_material/)
