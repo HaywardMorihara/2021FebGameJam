@@ -8,7 +8,6 @@ Built with Godot
 
 # Notes:
 ## TODO
-- Level 11 bug
 - Publish v2
 - Publish to Android store
 https://godotengine.org/qa/265/how-release-project-google-play-store-android-release-mode

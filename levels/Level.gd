@@ -196,9 +196,11 @@ func _find_shortest_path():
 	var shortest_path : PoolVector2Array
 	var shortest_path_len : float
 	for dest in get_tree().get_nodes_in_group("destinations"):
+		# Compensation - for some reason pathfinding tends to not make the path follow thru when moving downwards
+		var compensation = Vector2(0.0, 5.0)
 		var new_path : PoolVector2Array = $Navigation2D.get_simple_path(
 			$Walker.global_position,
-			dest.global_position,
+			dest.global_position + compensation,
 			false
 		)
 		if new_path.empty():
