@@ -9,3 +9,6 @@ export_presets.cfg
 
 # This folder stores automatically-generated Mono files. It only exists in projects that use the Mono version of Godot.
 .mono/
+
+# Don't think this should get added
+release.keystore
