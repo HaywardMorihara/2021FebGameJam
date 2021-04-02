@@ -29,6 +29,7 @@ Built with Godot
 - A little documentation on instancing/scene/shared properties: [https://www.reddit.com/r/godot/comments/drc82n/gdscript_instance_unique_material/](https://www.reddit.com/r/godot/comments/drc82n/gdscript_instance_unique_material/)
 - I wonder if it's a bad practice to be modifying the scene child the way I am with the tilemap for the map
 - Embedding HTML in Itch.io: https://itch.io/docs/creators/html5
+	and https://www.youtube.com/watch?v=fNLpZVNDQqc was also helpful
 
 ## Level Design:
 - Each level should subvert or introduce a new mechanic
