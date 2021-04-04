@@ -9,6 +9,9 @@ Built with Godot
 # Notes:
 
 ## Would like to do someday...
+- New mechanic - switch blocks, where if the guy walks over it, another block disappears
+- Have the guy show under the start button
+- Weird 0.0s error
 - Levels inherit, instead of copyings
 - May want to consider improving the visuals (clear that blocks BLOCK)
 - Game over / win sound effects (opengameart.org)
