@@ -47,7 +47,7 @@ margin_top = 329.511
 margin_right = 316.25
 margin_bottom = 379.511
 custom_fonts/font = SubResource( 2 )
-text = "Start Game"
+text = "Start"
 __meta__ = {
 "_edit_use_anchors_": false
 }
