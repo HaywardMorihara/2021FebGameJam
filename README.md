@@ -8,6 +8,8 @@ Built with Godot
 
 # Notes:
 
+_Only works with Godot v3.4 or lower! 
+
 ## Would like to do someday...
 - New mechanic - switch blocks, where if the guy walks over it, another block disappears
 - Have the guy show under the start button
