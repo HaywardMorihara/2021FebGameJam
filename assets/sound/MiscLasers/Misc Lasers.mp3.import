@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Misc Lasers.mp3-5e81ed68817ceffcde3ccb5118e98ec5.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/MiscLasers/Misc Lasers.mp3"
+dest_files=[ "res://.import/Misc Lasers.mp3-5e81ed68817ceffcde3ccb5118e98ec5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

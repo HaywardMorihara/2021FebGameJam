@@ -67,6 +67,7 @@ margin_right = 305.657
 margin_bottom = 631.456
 custom_fonts/font = SubResource( 4 )
 text = "Credits"
+
 [connection signal="pressed" from="StartGameButton" to="." method="_on_StartGameButton_pressed"]
 [connection signal="pressed" from="LevelSelectButton" to="." method="_on_LevelSelectButton_pressed"]
 [connection signal="pressed" from="CreditsButton" to="." method="_on_CreditsButton_pressed"]

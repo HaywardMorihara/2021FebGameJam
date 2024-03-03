@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Fire 5.mp3-859007fa7eb7dbde1ecaaf4e22d62734.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/MiscLasers/Fire 5.mp3"
+dest_files=[ "res://.import/Fire 5.mp3-859007fa7eb7dbde1ecaaf4e22d62734.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
