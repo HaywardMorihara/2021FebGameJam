@@ -7,8 +7,20 @@ Created for the
 Built with Godot
 
 # Notes:
+(2024-03-06) Tried publishing a new version to Google Play but ran into some issues:
+* I cannot publish with Android API Target Level 33
+* Target Level 33 is the max for Godot v3.4
+* The game does not work on Godot v3.5+ because of navigation changes
+* A workaround might be with "Custom Builds" (or just upgrade to Godot 4)
 
-_Only works with Godot v3.4 or lower! 
+Updating to Godot 4:
+* Navigation2D changed
+* Fix Tiles
+* Fix UI Layout
+* Set Global Styles
+
+Android Release Keystore:
+* In the local repo on my Dell XPS (.gitignored), and User/PW are in the editor
 
 ## Would like to do someday...
 - New mechanic - switch blocks, where if the guy walks over it, another block disappears
